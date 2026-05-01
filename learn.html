@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn — Brave Voices</title>
+  <meta name="description" content="The basics of child sexual abuse, the principles of prevention, and the context every caring adult should know." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+</head>
+<body>
+
+  <div class="safety-banner">
+    In immediate danger? Call <strong>911</strong>. To report child abuse, call the Childhelp National Hotline: <strong>1-800-422-4453</strong>.
+  </div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Brave Voices — home">
+        <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='Brave<span>Voices</span>';" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html" class="active">Learn</a></li>
+        <li><a href="listen.html">Listen</a></li>
+        <li><a href="take-action.html">Speak</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page hero (gradient + split layout) -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <span class="eyebrow">Learn</span>
+          <h1>Learn how to start<br/>the conversation.</h1>
+          <p class="lede">
+            Become a Brave Voice. We will only be comfortable speaking about uncomfortable subjects after we have practiced — and the only way to practice is together. This page is where the practice begins.
+          </p>
+        </div>
+        <div class="page-hero__image">
+          <img src="assets/learn-hero.jpg" alt="" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our responsibility -->
+  <section class="section">
+    <div class="container narrow">
+      <span class="eyebrow">Why it's on us</span>
+      <h2>It is our responsibility as adults to protect children.</h2>
+      <p>
+        We cannot expect children to broach a subject they do not hear openly discussed. The silence around child sexual abuse is not a failing of the young — it is a failing of the grown-ups who inherited the silence and passed it down.
+      </p>
+      <p>
+        Breaking that pattern does not require a podium or a platform. It requires one honest conversation, and then another, until the topic stops being the thing nobody can name.
+      </p>
+    </div>
+  </section>
+
+  <!-- The scale of it: statistics -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">By the numbers</span>
+      <h2>The scale of it.</h2>
+      <p class="lede" style="max-width: 60%">We share these here not to overwhelm but to make plain how widespread CSA is — and how much rests on the willingness of one adult to start a conversation.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">1 in 4</span>
+          <p class="stat-context">girls in the U.S. experience some form of sexual abuse before age 18.</p>
+          <span class="stat-source">Centers for Disease Control &amp; Prevention</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">1 in 13</span>
+          <p class="stat-context">boys in the U.S. experience some form of sexual abuse before age 18.</p>
+          <span class="stat-source">Centers for Disease Control &amp; Prevention</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">~91%</span>
+          <p class="stat-context">of children who are sexually abused are abused by someone they or their family already know.</p>
+          <span class="stat-source">Darkness to Light</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">~30%</span>
+          <p class="stat-context">of those who harm children are members of the child's own family.</p>
+          <span class="stat-source">Crimes Against Children Research Center</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">70%+</span>
+          <p class="stat-context">of survivors do not disclose for at least a year. Many wait decades. Some never tell.</p>
+          <span class="stat-source">Smith et al., <em>Child Abuse &amp; Neglect</em></span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3–4×</span>
+          <p class="stat-context">higher risk of depression, PTSD, and substance use disorders in adulthood for survivors.</p>
+          <span class="stat-source">Adverse Childhood Experiences Study, CDC–Kaiser</span>
+        </div>
+      </div>
+
+      <p class="stats-closer">Behind every number is a person who deserved to be heard.</p>
+    </div>
+  </section>
+
+  <!-- Tools for the conversation: tabbed -->
+  <section class="section section--teal-soft">
+    <div class="container">
+      <span class="eyebrow">Tools for the conversation</span>
+      <h2>Frameworks that help you speak.</h2>
+      <p class="lede" style="max-width: 60%">Three approaches that Brave Voices leans on — each one a different angle on the same work. Tap through to see how each can help you start, steady, and keep the conversation going.</p>
+
+      <div class="tabs tabs--plain" role="tablist" aria-label="Conversation frameworks">
+        <button class="tab" role="tab" id="spf" aria-selected="true" aria-controls="panel-spf" tabindex="0">Sex Positive Families</button>
+        <button class="tab" role="tab" id="nvc" aria-selected="false" aria-controls="panel-nvc" tabindex="-1">Nonviolent Communication</button>
+        <button class="tab" role="tab" id="tuc" aria-selected="false" aria-controls="panel-tuc" tabindex="-1">The Uncomfortable Conversation</button>
+      </div>
+
+      <!-- Panel: Sex Positive Families -->
+      <div id="panel-spf" class="tab-panel" role="tabpanel" aria-labelledby="spf">
+        <div class="tab-image"><img src="assets/tabs/sex-positive-families.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Normalize the conversation around natural sexual development.</h3>
+        <p>
+          Children who grow up hearing honest, age-appropriate language about their bodies and sexual development are better equipped to name what happens to them — and better protected from the silence that abuse relies on. Prevention starts long before a crisis does.
+        </p>
+        <p>
+          <a href="https://sexpositivefamilies.com/" target="_blank" rel="noopener"><strong>Sex Positive Families</strong></a> provides education and resources to help families raise sexually healthy children using a shame-free, comprehensive, and pleasure-positive approach.
+        </p>
+      </div>
+
+      <!-- Panel: Nonviolent Communication -->
+      <div id="panel-nvc" class="tab-panel" role="tabpanel" aria-labelledby="nvc" hidden>
+        <div class="tab-image"><img src="assets/tabs/nvc.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">A reliable way to say hard things.</h3>
+        <p>
+          Brave Voices grew out of both lived experience and Nonviolent Communication (NVC) — a practice developed by Marshall Rosenberg that gives people a reliable way to say hard things without attack, defense, or collapse. Our founder is a survivor and a trained NVC practitioner, and the two have been inseparable in shaping this work.
+        </p>
+        <p>NVC asks four small questions. They sound simple. They are not.</p>
+        <ul class="checklist">
+          <li><strong>Observation.</strong> What happened — stated without judgment, interpretation, or blame. <em>"When you changed the subject while I was speaking…"</em></li>
+          <li><strong>Feeling.</strong> What you felt in response — named as an emotion, not a thought. <em>"…I felt afraid and alone…"</em></li>
+          <li><strong>Need.</strong> The universal human need underneath the feeling. <em>"…because I need to be heard when I'm telling the truth about my life…"</em></li>
+          <li><strong>Request.</strong> A specific, doable ask — not a demand. <em>"…would you be willing to sit down with me and try the conversation again?"</em></li>
+        </ul>
+        <p>
+          Starting a Brave Voices conversation with this shape keeps you rooted in what is true for you, instead of what you fear the other person will think. It is one of the most powerful tools we know for breaking silence without also breaking relationship.
+        </p>
+        <p>
+          NVC is a practice, not a script. It takes reps. <a href="https://www.cnvc.org/about/purpose-of-nvc" target="_blank" rel="noopener">Learn more about NVC</a> from the Center for Nonviolent Communication.
+        </p>
+
+        <div class="quote-block" style="margin-top:2rem; text-align:center">
+          <span class="eyebrow" style="color:var(--rose)">Go deeper</span>
+          <p>Ready to build the practice? NVC Academy offers online courses and live trainings from world-class NVC practitioners — at every level, from first-timer to long-time student.</p>
+          <a href="https://nvcacademy.com/home" target="_blank" rel="noopener" class="btn btn--lg" style="margin-top:.5rem">Explore NVC Academy →</a>
+        </div>
+      </div>
+
+      <!-- Panel: The Uncomfortable Conversation -->
+      <div id="panel-tuc" class="tab-panel" role="tabpanel" aria-labelledby="tuc" hidden>
+        <div class="tab-image"><img src="assets/tabs/uncomfortable-conversation.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Conversations change culture.</h3>
+        <p>
+          <a href="https://www.theuncomfortableconversation.com/" target="_blank" rel="noopener"><strong>The Uncomfortable Conversation, Inc.</strong></a> is dedicated to normalizing conversations about sexual violence, particularly among young men. They believe conversations are accessible, practical, and scalable tools that drive individual, organizational, and cultural change.
+        </p>
+        <p>
+          The organization has produced 100+ short videos illustrating how people of all genders — but especially men — can support survivors, navigate consent, and address troubling ideas or behaviors among peers.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Video & Audio resources: tabbed -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Video &amp; Audio resources</span>
+      <h2>Watch. Listen. Learn.</h2>
+      <p class="lede" style="max-width: 60%">Talks and conversations we keep coming back to — from survivors, advocates, and educators who have turned their voices into tools other people can use.</p>
+
+      <div class="tabs tabs--plain" role="tablist" aria-label="Video and audio resources">
+        <button class="tab" role="tab" id="siblingstoo" aria-selected="true" aria-controls="panel-siblingstoo" tabindex="0">Jane Epstein</button>
+        <button class="tab" role="tab" id="nssac" aria-selected="false" aria-controls="panel-nssac" tabindex="-1">NSSA Conference 2022</button>
+        <button class="tab" role="tab" id="rena" aria-selected="false" aria-controls="panel-rena" tabindex="-1">Rena Romano</button>
+        <button class="tab" role="tab" id="yvette" aria-selected="false" aria-controls="panel-yvette" tabindex="-1">Dr. Yvette Erasmus</button>
+        <button class="tab" role="tab" id="feather" aria-selected="false" aria-controls="panel-feather" tabindex="-1">Feather Berkower</button>
+        <button class="tab" role="tab" id="sarri" aria-selected="false" aria-controls="panel-sarri" tabindex="-1">Sarri Gillman</button>
+        <button class="tab" role="tab" id="ladonna" aria-selected="false" aria-controls="panel-ladonna" tabindex="-1">LaDonna Silva</button>
+        <button class="tab" role="tab" id="rachael" aria-selected="false" aria-controls="panel-rachael" tabindex="-1">Rachael Herron</button>
+        <button class="tab" role="tab" id="nvc-academy" aria-selected="false" aria-controls="panel-nvc-academy" tabindex="-1">NVC Academy</button>
+        <button class="tab" role="tab" id="practice-groups" aria-selected="false" aria-controls="panel-practice-groups" tabindex="-1">Practice Groups</button>
+        <button class="tab" role="tab" id="podcasts" aria-selected="false" aria-controls="panel-podcasts" tabindex="-1">Podcasts</button>
+      </div>
+
+      <!-- Panel: #SiblingsToo -->
+      <div id="panel-siblingstoo" class="tab-panel" role="tabpanel" aria-labelledby="siblingstoo">
+        <div class="tab-image"><img src="assets/tabs/jane-epstein.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Giving voice to sibling sexual abuse.</h3>
+        <p>
+          Recent studies show sibling sexual abuse (SSA) is the most common form of child sexual abuse — affecting as many as 1 in 5 families, and at least three times more prevalent than father–child abuse. Yet SSA remains what survivors and researchers have called the "hidden taboo" — hidden in families, hidden in society, and under-researched as a result. Survivors, perpetrators, and the families around them are too often left to navigate it without guidance.
+        </p>
+        <p>
+          <strong>Jane Epstein</strong>, an SSA survivor and advocate, spent 40 years in a continual state of dissociation — in and out of therapy, depressed, and at times suicidal — believing she was the only one. Sobriety and self-reflection eventually led her to write her story, and she discovered that almost no one on the entire internet was speaking about SSA. So she started speaking, and <strong>#SiblingsToo</strong> was born.
+        </p>
+        <p>
+          In her TEDx Talk, Jane explains why helping survivors share their stories is how we build the community that inspires new research, solutions, awareness, prevention, and support — and how one voice gives the next survivor permission to find theirs.
+        </p>
+        <p>
+          <a href="https://youtu.be/0X5TvYrHxTA?si=JzEpJx-M-GG3RzS2" target="_blank" rel="noopener"><strong>Watch Jane Epstein's TEDx Talk →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: NSSA Conference 2022 -->
+      <div id="panel-nssac" class="tab-panel" role="tabpanel" aria-labelledby="nssac" hidden>
+        <div class="tab-image"><img src="assets/tabs/nssa-conference.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">The first national conference on sibling sexual abuse.</h3>
+        <p>
+          Held in February 2022 and organised by the RCEW National Project on Sibling Sexual Abuse (2020–2022), the <strong>National Sibling Sexual Abuse Conference for Frontline Sectors</strong> was the first national conference of its kind in the U.K.
+        </p>
+        <p>
+          Sibling sexual abuse is the most common form of child sexual abuse in our homes — estimated to be three times more likely than abuse by a parent — and it remains a pressing social and public health problem. The conference brought together professionals across criminal justice, education, health, local government, policing, social care, support centres for victim-survivors, and the third sector.
+        </p>
+        <p>
+          The recorded sessions and films are designed to help practitioners build professional confidence and knowledge, and to better support affected children, young people, families, and adult survivors.
+        </p>
+        <p>
+          <a href="https://www.youtube.com/@nationalsiblingsexualabuse7299/videos" target="_blank" rel="noopener"><strong>Watch the conference videos →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: Rena Romano -->
+      <div id="panel-rena" class="tab-panel" role="tabpanel" aria-labelledby="rena" hidden>
+        <div class="tab-image"><img src="assets/tabs/rena-romano.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Healing can start with one word.</h3>
+        <p>
+          <strong>Rena Romano</strong> — author, mindset coach, and survivor-advocate who once shared her story on <em>The Oprah Winfrey Show</em> — argues that healing from child sexual abuse begins with the decision to tell. Whether a survivor keeps telling, or goes silent again, depends almost entirely on how the first listener responds.
+        </p>
+        <p>
+          "If healing begins by telling," Romano says, "then we must make telling safe." Her TEDxOcala talk is a practical invitation to be the listener a survivor can safely speak to — and a reminder that any one of us can be that person.
+        </p>
+        <p>
+          <a href="https://youtu.be/rQ4RoldUzHc?si=u5Z24DUpFx6rH-d8" target="_blank" rel="noopener"><strong>Watch Rena Romano's TEDx Talk →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: Dr. Yvette Erasmus -->
+      <div id="panel-yvette" class="tab-panel" role="tabpanel" aria-labelledby="yvette" hidden>
+        <div class="tab-image"><img src="assets/tabs/yvette-erasmus.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Inner maps for deeper connection.</h3>
+        <p>
+          <strong>Dr. Yvette Erasmus</strong> teaches processes and inner maps designed to help people transform self-sabotaging habits and disconnected relationships into deeper connection, meaning, and purpose. Her work speaks to the questions many of us carry quietly:
+        </p>
+        <ul class="checklist">
+          <li>Can I understand myself — and the people around me — more deeply?</li>
+          <li>Can blame and shame become compassion and healing?</li>
+          <li>Can I live into my deepest values with confidence and clarity?</li>
+        </ul>
+        <p>
+          Through educational programs, group coaching, and personal sessions, she offers a welcoming, non-judgmental space where inner strength and the authentic self can be practiced out loud.
+        </p>
+        <p><strong>Two interviews to start with:</strong></p>
+        <p>
+          <a href="https://youtu.be/GyPZ7DsJHlw" target="_blank" rel="noopener"><strong>Watch Part One →</strong></a><br/>
+          <a href="https://youtu.be/_606GF4SkwE" target="_blank" rel="noopener"><strong>Watch Part Two →</strong></a>
+        </p>
+
+        <div class="quote-block" style="margin-top:2rem">
+          <span class="eyebrow" style="color:var(--rose)">Go deeper — affiliate link</span>
+          <p>The link below unlocks a discount on Dr. Yvette's course. Clicking through supports Brave Voices at no extra cost to you.</p>
+          <p style="margin-bottom:0">
+            <a href="https://community.yvetteerasmus.com/~access/a2c1885f/" target="_blank" rel="noopener"><strong>Get the discount →</strong></a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Panel: Feather Berkower -->
+      <div id="panel-feather" class="tab-panel" role="tabpanel" aria-labelledby="feather" hidden>
+        <div class="tab-image"><img src="assets/tabs/feather-berkower.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Making communities "off limits" to child sexual assault.</h3>
+        <p>
+          <strong>Feather Berkower</strong>, founder of <a href="https://parentingsafechildren.com/" target="_blank" rel="noopener">Parenting Safe Children</a>, is a licensed clinical social worker and one of the nation's leading experts in child sexual assault prevention. Across more than three decades, she has dedicated her career to teaching parents and youth professionals how to make their communities "off limits" to child sexual assault.
+        </p>
+        <p>
+          Using her community-based approach, Feather has trained more than 150,000 schoolchildren, parents, and youth professionals across the United States — and she now shares that knowledge with parents, grandparents, aunts, uncles, and youth professionals through her <em>live workshops</em> worldwide and her pre-recorded <em>online workshop</em>.
+        </p>
+        <p>
+          <a href="https://parentingsafechildren.com/resources/" target="_blank" rel="noopener"><strong>Listen to Feather's StoryCorps interview →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: Sarri Gillman -->
+      <div id="panel-sarri" class="tab-panel" role="tabpanel" aria-labelledby="sarri" hidden>
+        <div class="tab-image"><img src="assets/tabs/sarri-gillman.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Boundaries as a practice of self-knowing.</h3>
+        <p>
+          <strong>Sarri Gillman, LMFT</strong> has been a licensed marriage and family therapist since 1986. Alongside her clinical work, she spent two decades as an executive director of several nonprofits and seven years teaching leadership to managers and executives. She is an author, <em>TEDx speaker</em>, presenter, community leader, and SoulCollage<sup>®</sup> facilitator.
+        </p>
+        <p>
+          She is also the creator and founder of the <em>Transform Your Boundaries<sup>®</sup></em> and <em>Naming and Taming Overwhelm<sup>®</sup></em> workshops, and a member of the <em>Compassionate Mind Foundation</em>.
+        </p>
+        <p>
+          <a href="https://youtu.be/KSp7AuX0dDE" target="_blank" rel="noopener"><strong>Watch Sarri's interview →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: LaDonna Silva -->
+      <div id="panel-ladonna" class="tab-panel" role="tabpanel" aria-labelledby="ladonna" hidden>
+        <div class="tab-image"><img src="assets/tabs/ladonna-silva.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Beyond the cognitive — working with the whole person.</h3>
+        <p>
+          <a href="https://www.ladonnasilva.com/" target="_blank" rel="noopener"><strong>LaDonna Silva, LMFT</strong></a> holds a Master's degree in Counseling Psychology and Holistic Studies from John F. Kennedy University — a program that combined Transpersonal Psychology and Somatic Psychology. That blend of spirituality and the body gives her a foundation to meet clients far beyond the cognitive realm alone.
+        </p>
+        <p>
+          In this interview, LaDonna speaks about finding voice, a lifetime of advocacy, and breaking dysfunctional family systems with curiosity, compassion, and care — plus an introduction to Internal Family Systems (IFS).
+        </p>
+        <p>
+          <a href="https://youtu.be/I0hFz1vypVs" target="_blank" rel="noopener"><strong>Watch LaDonna's interview →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: Rachael Herron -->
+      <div id="panel-rachael" class="tab-panel" role="tabpanel" aria-labelledby="rachael" hidden>
+        <div class="tab-image"><img src="assets/tabs/rachael-herron.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Learning to sit in discomfort.</h3>
+        <p>
+          <strong>Rachael Herron</strong>'s episode is technically about writing — but it's really about learning to manage, cope with, and even <em>enjoy</em> the uncomfortable aspects of life. People don't sit in discomfort unless they care enough.
+        </p>
+        <p>
+          Brave Voices is asking you to care enough to sit in the discomfort of a difficult, uncomfortable subject — and Rachael's framing is one of the gentlest invitations to do exactly that.
+        </p>
+        <p>
+          <a href="https://www.youtube.com/watch?v=_TBn64j3XWU" target="_blank" rel="noopener"><strong>Watch the episode →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: NVC Academy -->
+      <div id="panel-nvc-academy" class="tab-panel" role="tabpanel" aria-labelledby="nvc-academy" hidden>
+        <div class="tab-image"><img src="assets/tabs/nvc-academy.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Learn anywhere, anytime, at your own pace.</h3>
+        <p>
+          The <strong>NVC Academy</strong> Library brings together a rich, ever-growing collection of Nonviolent Communication teaching from experienced trainers around the world. Whether you're new to NVC or deepening an existing practice, you'll find courses, workshops, and practical tools that support real change in how you communicate, connect, and lead.
+        </p>
+        <p>
+          Develop your capacity for empathy, navigate conflict with more clarity, and strengthen relationships — at a pace that fits your life. Start when you're ready, revisit teachings anytime, and integrate NVC into your everyday conversations.
+        </p>
+        <p>
+          <a href="https://nvclibrary.com/" target="_blank" rel="noopener"><strong>Explore the NVC Library →</strong></a><br/>
+          <a href="https://www.youtube.com/@nvcacademy/featured" target="_blank" rel="noopener"><strong>Watch on YouTube →</strong></a>
+        </p>
+      </div>
+
+      <!-- Panel: Practice Groups -->
+      <div id="panel-practice-groups" class="tab-panel" role="tabpanel" aria-labelledby="practice-groups" hidden>
+        <div class="tab-image"><img src="assets/tabs/practice-groups.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Free and donation-based places to practice.</h3>
+        <p>
+          NVC asks four small questions. They sound simple — and the questions only become natural with reps. The communities and resources below offer <strong>free or donation-based</strong> ways to practice Compassionate Communication, with people who are practicing too.
+        </p>
+        <ul class="checklist">
+          <li><a href="https://wiseheartcommunity.org/" target="_blank" rel="noopener"><strong>Wise Heart</strong></a></li>
+          <li><a href="https://nvcsantacruz.org/" target="_blank" rel="noopener"><strong>Art of Communication — NVC Santa Cruz</strong></a></li>
+          <li><a href="https://empathologie.com/" target="_blank" rel="noopener"><strong>Empathologie</strong></a></li>
+          <li><a href="https://onebigcircle.us/" target="_blank" rel="noopener"><strong>One Big Circle</strong></a></li>
+          <li><a href="https://sites.google.com/view/nvcwithjoriandjim/home" target="_blank" rel="noopener"><strong>Open Hearted Practice Group</strong></a></li>
+          <li><a href="https://pathwaystoliberation.com/resources/" target="_blank" rel="noopener"><strong>Pathways to Liberation</strong></a></li>
+        </ul>
+      </div>
+
+      <!-- Panel: Podcasts -->
+      <div id="panel-podcasts" class="tab-panel" role="tabpanel" aria-labelledby="podcasts" hidden>
+        <div class="tab-image"><img src="assets/tabs/podcasts.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Voices in your ear.</h3>
+        <p>Podcasts Brave Voices recommends for survivors, supporters, and anyone learning to listen well.</p>
+        <ul class="checklist">
+          <li><a href="http://www.braveandunbroken.org/podcast.html" target="_blank" rel="noopener"><strong>The Brave and Unbroken Project</strong></a></li>
+          <li><a href="https://www.kathyandersen.com/podcast" target="_blank" rel="noopener"><strong>Overcoming Child Sexual Abuse: The Podcast</strong></a></li>
+          <li><a href="https://www.nsvrc.org/podcasts" target="_blank" rel="noopener"><strong>NSVRC Resource on the Go Podcast</strong></a></li>
+          <li><a href="https://www.saancommunity.org/podcast-series" target="_blank" rel="noopener"><strong>SAAN Podcast List</strong></a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/beyond-surviving-with-rachel-grant/id876092316?mt=2" target="_blank" rel="noopener"><strong>Beyond Surviving with Rachel Grant</strong></a></li>
+          <li><a href="https://podcasts.apple.com/us/podcast/jane-fonda-how-to-not-lose-yourself-right-now/id1564530722?i=1000761228799" target="_blank" rel="noopener"><strong>Jane Fonda: How to Not Lose Yourself Right Now</strong></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reading: Books -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">Reading</span>
+      <h2>Books that changed us.</h2>
+      <p class="lede" style="max-width: 60%">Eight books Brave Voices returns to — on shame, boundaries, compassion, disclosure, and the long road home.</p>
+
+      <div class="cards cards--four book-grid">
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/healing-shame.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>Healing the Shame That Binds You</h3>
+          <h4>John Bradshaw</h4>
+          <p>The foundational text on toxic shame — how it takes root in childhood and keeps us silent as adults. Naming the shame is where the unbinding begins.</p>
+          <a href="https://www.amazon.com/Healing-Shame-Binds-Recovery-Classics/dp/0757303234" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/transform-boundaries.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>Transform Your Boundaries</h3>
+          <h4>Sarri Gilman</h4>
+          <p>Boundaries as a practice of self-knowing, not a wall you build. A workbook you'll return to — from the therapist whose interview lives one section up.</p>
+          <a href="https://www.amazon.com/Transform-Your-Boundaries-Sarri-Gilman/dp/098977872X" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/compassion-book.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>The Compassion Book</h3>
+          <h4>Thom Bond</h4>
+          <p>Daily Nonviolent Communication practice in small, reliable pieces. A year of gentle prompts that build the muscle, one morning at a time.</p>
+          <a href="https://www.amazon.com/Compassion-Book-Lessons-Course/dp/0999441116" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/pathways-nvc.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>Pathways to Nonviolent Communication</h3>
+          <h4>Jim Manske</h4>
+          <p>A practical field guide for anyone navigating the NVC journey — from first encounter to daily practice. Maps for the parts Marshall Rosenberg left blank.</p>
+          <a href="https://www.amazon.com/Pathways-Nonviolent-Communication-Navigating-Journey/dp/1934336408" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/piece-of-cake.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>A Piece of Cake</h3>
+          <h4>Cupcake Brown</h4>
+          <p>A memoir of abuse, addiction, and survival that refuses to sand down any of it. Unsparing, and somehow still hopeful.</p>
+          <a href="https://www.amazon.com/gp/product/1400052297?tag=randohouseinc7986-20" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/let-love.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>Let Love Have the Last Word</h3>
+          <h4>Common</h4>
+          <p>The rapper's meditation on love, family, and his own disclosure as a survivor of childhood sexual abuse. Spare, vulnerable, and generous.</p>
+          <a href="https://www.amazon.com/Let-Love-Have-Last-Word/dp/1501133160" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/you-have-no-idea.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>You Have No Idea</h3>
+          <h4>Vanessa Williams &amp; Helen Williams</h4>
+          <p>A mother and daughter write across the silence that divided them — including Vanessa's childhood assault — and build a new kind of conversation.</p>
+          <a href="https://www.amazon.com/You-Have-No-Idea-No-nonsense/dp/1592407072" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+
+        <article class="card book-card">
+          <div class="book-cover">
+            <img src="assets/books/burning-light.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+          <h3>The Burning Light of Two Stars</h3>
+          <h4>Laura Davis</h4>
+          <p>From the co-author of <em>The Courage to Heal</em>, a mother-daughter memoir about rupture, estrangement, and the slow work of finding each other again.</p>
+          <a href="https://www.amazon.com/Burning-Light-Two-Stars-Mother-Daughter/dp/1954854161" target="_blank" rel="noopener" class="card-link">Find it →</a>
+        </article>
+      </div>
+
+      <!-- Handouts & further reading -->
+      <div class="handouts">
+        <div class="handouts-header">
+          <span class="eyebrow">Handouts &amp; further reading</span>
+          <h2>Docs, PDFs, and practice tools.</h2>
+          <p class="lede" style="max-width: 60%">Resources Brave Voices returns to — some written for our participants, some drawn from the wider NVC and survivor-support communities. Open, read, and come back when you need them.</p>
+        </div>
+
+        <div class="handouts-grid">
+          <div class="handouts-group">
+            <h3>Brave Voices practice tools</h3>
+            <ul class="doc-list">
+              <li>
+                <a href="https://docs.google.com/document/u/0/d/1jKGnl78lFOnwpr5UrjMUaNt223p8vigaL2FwJNMCGwA/edit" target="_blank" rel="noopener"><strong>Agreements</strong></a>
+                <span class="doc-meta">Our intentions for all Brave Voices participants.</span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/document/d/1zL0AuXpgl7m0dYMHpu2MUDE1TQ6fibRvkaT9xiUUQo4/edit" target="_blank" rel="noopener"><strong>Brave Voices Invocation</strong></a>
+                <span class="doc-meta">A grounding invocation to open a gathering.</span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/document/u/0/d/11QVQMpI70mnsnHps0fbO4tubDncbcZJyTKAbu_SGD_M/edit" target="_blank" rel="noopener"><strong>Body Sensations</strong></a>
+                <span class="doc-meta">What do you feel in your body? Cold, hot, sweaty?</span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/document/d/1ZHr3ywaLUlROge1btf6aKuZjCmDmUX4s8fK0gkTPArA/edit" target="_blank" rel="noopener"><strong>Strong Feelings &amp; Needs Associated with CSA</strong></a>
+                <span class="doc-meta">Name them to tame them.</span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/document/d/15nzIbA1sAE13j4_nkwTLMBFNvzmMisnMf4cff8kOL8M/edit" target="_blank" rel="noopener"><strong>Emotional Intelligence</strong></a>
+                <span class="doc-meta">Why we want to get in touch with our feelings and needs.</span>
+              </li>
+              <li>
+                <a href="https://docs.google.com/document/d/1Mj8rcV6Eq-RHVcFREviBWSRsFIncjG0sThb6fZRneDI/edit" target="_blank" rel="noopener"><strong>Developmental Needs Chart</strong></a>
+                <span class="doc-meta">A map of the needs we carry through every stage of life.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="handouts-group">
+            <h3>Feelings, needs &amp; NVC</h3>
+            <ul class="doc-list">
+              <li>
+                <a href="https://www.cnvc.org/sites/default/files/2018-10/CNVC-feelings-inventory.pdf" target="_blank" rel="noopener"><strong>Feelings Inventory</strong> <span class="doc-tag">PDF</span></a>
+                <span class="doc-meta">From the Center for Nonviolent Communication.</span>
+              </li>
+              <li>
+                <a href="https://cdn.shopify.com/s/files/1/0101/4179/4382/files/Feelings_Inventory_2021.pdf?v=1622533431" target="_blank" rel="noopener"><strong>Feelings Inventory</strong> <span class="doc-tag">PDF</span></a>
+                <span class="doc-meta">From GROK the World — a slightly different list. See which you prefer.</span>
+              </li>
+              <li>
+                <a href="https://www.cnvc.org/sites/default/files/2018-10/CNVC-needs-inventory.pdf" target="_blank" rel="noopener"><strong>Needs Inventory</strong> <span class="doc-tag">PDF</span></a>
+                <span class="doc-meta">Met and unmet — celebrations and mournings.</span>
+              </li>
+              <li>
+                <a href="https://groktheworld.com/" target="_blank" rel="noopener"><strong>GROK the World</strong></a>
+                <span class="doc-meta">Feelings and needs cards — get to the heart of the matter.</span>
+              </li>
+              <li>
+                <a href="https://www.teachingfromyourheart.org/" target="_blank" rel="noopener"><strong>Teaching From Your Heart</strong></a>
+                <span class="doc-meta">Inbal Kashtan's NVC-based parenting work — guidance for raising children with empathy, presence, and connection.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="handouts-group">
+            <h3>Understanding trauma &amp; CSA</h3>
+            <ul class="doc-list">
+              <li>
+                <a href="https://en.wikipedia.org/wiki/Child_sexual_abuse" target="_blank" rel="noopener"><strong>Child Sexual Abuse — Definition</strong></a>
+                <span class="doc-meta">A plain-language overview of what CSA is, how it presents, and the language used to talk about it.</span>
+              </li>
+              <li>
+                <a href="https://www.isst-d.org/publications-resources/public-resources/fact-sheet-i-trauma-and-complex-trauma-an-overview/" target="_blank" rel="noopener"><strong>Trauma and Complex Trauma — An Overview</strong></a>
+                <span class="doc-meta">A primer from the International Society for the Study of Trauma and Dissociation on what trauma is, how complex trauma differs, and why it matters for survivors and those who support them.</span>
+              </li>
+              <li>
+                <a href="https://www.pacesconnection.com/blog/aces-101-faqs" target="_blank" rel="noopener"><strong>PACEs Science 101 — FAQs</strong></a>
+                <span class="doc-meta">An accessible introduction to Positive and Adverse Childhood Experiences — what shapes lifelong health, and what helps kids thrive.</span>
+              </li>
+              <li>
+                <a href="https://thewisdomoftrauma.com/resources/" target="_blank" rel="noopener"><strong>The Wisdom of Trauma — Resources</strong></a>
+                <span class="doc-meta">A curated hub from the Gabor Maté documentary — books, talks, and tools for understanding trauma and the path toward healing.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="handouts-group">
+            <h3>For survivors &amp; supporters</h3>
+            <ul class="doc-list">
+              <li>
+                <a href="https://nnedv.org/wp-content/uploads/2020/07/Library_TH_Comprehensive_Services_SA_Survivors.pdf" target="_blank" rel="noopener"><strong>Comprehensive Services for Survivors of Sexual Violence</strong> <span class="doc-tag">PDF</span></a>
+                <span class="doc-meta">Sexual Assault Demonstration Initiative, by Kelly Wilt — Resource Sharing Project.</span>
+              </li>
+              <li>
+                <a href="https://www.pcar.org/sites/default/files/resource-pdfs/friends_and_family_guide_final.pdf" target="_blank" rel="noopener"><strong>A Guide for Friends and Family of Sexual Violence Survivors</strong> <span class="doc-tag">PDF</span></a>
+                <span class="doc-meta">Effective communication matters. Here's how to show up.</span>
+              </li>
+              <li>
+                <a href="https://familysupportresources.com/" target="_blank" rel="noopener"><strong>Family Support Resources</strong></a>
+                <span class="doc-meta">A resource hub for families navigating the aftermath of CSA — practical guidance, support services, and tools.</span>
+              </li>
+              <li>
+                <a href="https://techniumscience.com/index.php/socialsciences/article/view/5552/1986" target="_blank" rel="noopener"><strong>Psychosocial Implications of CSA on the Non-Offending Caregivers</strong> <span class="doc-tag">Research</span></a>
+                <span class="doc-meta">A peer-reviewed paper by Ramphabana, Kgatla, and Nxiweni on the distress, shame, and unmet needs caregivers carry after a child's disclosure — and why supporting them is part of supporting the child.</span>
+              </li>
+              <li>
+                <a href="https://www.sciencedirect.com/science/article/pii/S0145213421005299" target="_blank" rel="noopener"><strong>Parents' Experiences During the Initial Crisis Period Post-Discovery</strong> <span class="doc-tag">Research</span></a>
+                <span class="doc-meta">A qualitative study from the Amsterdam Sexual Abuse Case — parents of very young CSA victims on shock, media exposure, and what service responses actually helped.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="handouts-group">
+            <h3>Write your story</h3>
+            <ul class="doc-list">
+              <li>
+                <a href="https://lauradavis.net/writing-classes/" target="_blank" rel="noopener"><strong>Laura Davis — Writing Workshops</strong></a>
+                <span class="doc-meta">From the co-author of <em>The Courage to Heal</em> — write your lived experience alongside other survivors.</span>
+              </li>
+              <li>
+                <a href="https://voicesandfaces.org/" target="_blank" rel="noopener"><strong>The Voices and Faces Project</strong></a>
+                <span class="doc-meta">Write your lived experience as memoir or poetry, with the support of a survivor-led writing community.</span>
+              </li>
+              <li>
+                <a href="https://rachaelherron.com/write/" target="_blank" rel="noopener"><strong>Rachael Herron</strong></a>
+                <span class="doc-meta">Need help getting it on the page? One of the most generous writing coaches and teachers we've worked with — pure joy, encouragement, and follow-through.</span>
+              </li>
+              <li>
+                <a href="https://www.happycockchurch.com/" target="_blank" rel="noopener"><strong>Happy Cock Church</strong></a>
+                <span class="doc-meta">Your story matters. Write and speak your truth.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="handouts-image">
+            <img src="assets/handouts-image.jpg" alt="" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizations -->
+  <section class="section" id="organizations">
+    <div class="container">
+      <div class="orgs-header">
+        <span class="eyebrow">Organizations</span>
+        <h2>Where to turn, where to give, where to learn more.</h2>
+        <p>A curated set of organizations doing the work — preventing harm before it happens, and walking with survivors after it has.</p>
+      </div>
+
+      <div class="orgs-grid">
+        <div class="orgs-group">
+          <h3>Dedicated to the prevention of CSA</h3>
+          <ul class="doc-list">
+            <li>
+              <a href="https://www.d2l.org/" target="_blank" rel="noopener"><strong>Darkness to Light</strong></a>
+              <span class="doc-meta">Trains adults to prevent, recognize, and respond to child sexual abuse — home of the Stewards of Children® program.</span>
+            </li>
+            <li>
+              <a href="https://www.stopitnow.org/" target="_blank" rel="noopener"><strong>Stop It Now!</strong></a>
+              <span class="doc-meta">A confidential helpline and education hub for adults who want to prevent CSA before it happens.</span>
+            </li>
+            <li>
+              <a href="https://enoughabuse.org/" target="_blank" rel="noopener"><strong>Enough Abuse</strong></a>
+              <span class="doc-meta">State-by-state advocacy, prevention training, and policy work to end child sexual abuse.</span>
+            </li>
+            <li>
+              <a href="https://www.bravemovement.org/" target="_blank" rel="noopener"><strong>Brave Movement</strong></a>
+              <span class="doc-meta">A survivor-led global movement organizing to end childhood sexual violence through policy change.</span>
+            </li>
+            <li>
+              <a href="https://endsexualexploitation.org/" target="_blank" rel="noopener"><strong>End Sexual Abuse and Exploitation</strong></a>
+              <span class="doc-meta">National advocacy and policy work to dismantle the systems that fuel sexual abuse and exploitation.</span>
+            </li>
+            <li>
+              <a href="https://www.themamabeareffect.org/" target="_blank" rel="noopener"><strong>The Mama Bear Effect</strong></a>
+              <span class="doc-meta">Tools and language to help parents and caregivers protect kids in everyday family and community life.</span>
+            </li>
+            <li>
+              <a href="https://thebluebench.org/" target="_blank" rel="noopener"><strong>The Blue Bench</strong></a>
+              <span class="doc-meta">Denver-based prevention and treatment for sexual assault, with a strong focus on community education.</span>
+            </li>
+            <li>
+              <a href="https://amaze.org/" target="_blank" rel="noopener"><strong>Amaze</strong></a>
+              <span class="doc-meta">Age-appropriate, animated sex-ed videos for kids, parents, and educators — built around safety and consent.</span>
+            </li>
+            <li>
+              <a href="https://positiveexperience.org/" target="_blank" rel="noopener"><strong>HOPE — Healthy Outcomes from Positive Experiences</strong></a>
+              <span class="doc-meta">A research-driven framework on the positive childhood experiences that buffer trauma and build resilience.</span>
+            </li>
+            <li>
+              <a href="https://www.kidpower.org/" target="_blank" rel="noopener"><strong>Kidpower</strong></a>
+              <span class="doc-meta">Practical personal-safety and self-protection skills for children, teens, and the adults who love them.</span>
+            </li>
+            <li>
+              <a href="https://laurenskids.org/" target="_blank" rel="noopener"><strong>Lauren's Kids</strong></a>
+              <span class="doc-meta">Educates adults and empowers children around CSA prevention through curricula, awareness, and policy.</span>
+            </li>
+            <li>
+              <a href="https://safersmarterkids.org/" target="_blank" rel="noopener"><strong>Safer Smarter Kids</strong></a>
+              <span class="doc-meta">A free, age-appropriate CSA prevention curriculum for pre-K through 12th grade.</span>
+            </li>
+            <li>
+              <a href="https://defenddignity.ca/" target="_blank" rel="noopener"><strong>Defend Dignity</strong></a>
+              <span class="doc-meta">A Canadian organization working to end sexual exploitation through prevention, advocacy, and survivor support.</span>
+            </li>
+            <li>
+              <a href="https://oakfnd.org/programmes/prevent-child-sexual-abuse/" target="_blank" rel="noopener"><strong>Oak Foundation — Prevent Child Sexual Abuse</strong></a>
+              <span class="doc-meta">A global funder backing frontline organizations that prevent CSA and protect children from harm.</span>
+            </li>
+            <li>
+              <a href="https://buddyspeaks.org/home" target="_blank" rel="noopener"><strong>Buddy Speaks</strong></a>
+              <span class="doc-meta">Child-friendly tools and storytelling that help kids recognize unsafe situations and find their voice early.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="orgs-group">
+          <h3>Committed to help &amp; healing after CSA trauma</h3>
+          <ul class="doc-list">
+            <li>
+              <a href="https://1in6.org/" target="_blank" rel="noopener"><strong>1in6</strong></a>
+              <span class="doc-meta">Helping men who have had unwanted or abusive sexual experiences live healthier, happier lives — peer support, online groups, and resources.</span>
+            </li>
+            <li>
+              <a href="https://www.louderthansilence.org/" target="_blank" rel="noopener"><strong>Louder Than Silence</strong></a>
+              <span class="doc-meta">A survivor-led community offering connection, advocacy, and resources for those impacted by CSA.</span>
+            </li>
+            <li>
+              <a href="https://mirrormemoirs.org/" target="_blank" rel="noopener"><strong>Mirror Memoirs</strong></a>
+              <span class="doc-meta">Storytelling and movement-building led by LGBTQ+ BIPOC survivors of CSA — healing through narrative and collective action.</span>
+            </li>
+            <li>
+              <a href="https://rainn.org/" target="_blank" rel="noopener"><strong>RAINN</strong></a>
+              <span class="doc-meta">The largest anti-sexual-violence organization in the U.S. — runs the National Sexual Assault Hotline (1-800-656-HOPE).</span>
+            </li>
+            <li>
+              <a href="https://snapnetwork.org/" target="_blank" rel="noopener"><strong>SNAP</strong></a>
+              <span class="doc-meta">Survivors Network of those Abused by Priests — peer support and advocacy for survivors of clergy and institutional abuse.</span>
+            </li>
+            <li>
+              <a href="https://www.mosac.net/" target="_blank" rel="noopener"><strong>MOSAC</strong></a>
+              <span class="doc-meta">Mothers of Sexually Abused Children — peer support, education, and advocacy for non-offending caregivers.</span>
+            </li>
+            <li>
+              <a href="https://www.childhood-usa.org/share-your-hope/?" target="_blank" rel="noopener"><strong>World Childhood Foundation</strong></a>
+              <span class="doc-meta">Global support for survivors and prevention work, including the "Share Your Hope" storytelling initiative.</span>
+            </li>
+            <li>
+              <a href="https://justalternatives.org/index.php" target="_blank" rel="noopener"><strong>Just Alternatives</strong></a>
+              <span class="doc-meta">Restorative, survivor-centered alternatives to traditional responses to sexual harm.</span>
+            </li>
+            <li>
+              <a href="https://www.5waves.org/" target="_blank" rel="noopener"><strong>5Waves</strong></a>
+              <span class="doc-meta">A survivor-led nonprofit dedicated to healing, education, and prevention around sibling sexual abuse.</span>
+            </li>
+            <li>
+              <a href="https://www.sanesart.org/" target="_blank" rel="noopener"><strong>SANE-SART</strong></a>
+              <span class="doc-meta">Sexual Assault Nurse Examiner and Sexual Assault Response Team — coordinated medical, forensic, and support care after assault.</span>
+            </li>
+            <li>
+              <a href="https://www.wingsfound.org/" target="_blank" rel="noopener"><strong>Wings</strong></a>
+              <span class="doc-meta">Education, support, and healing resources for adult survivors of childhood sexual abuse.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA (with background image) -->
+  <section class="section section--cta" style="--cta-bg: url('assets/cta-learn.jpg');">
+    <div class="container narrow" style="text-align:center">
+      <h2>Join the Brave Voices Movement.</h2>
+      <p class="lede">
+        Use your voice to protect children from sexual harm. Start the conversation this week — with one person, in your own words. That is how the silence ends.
+      </p>
+      <div class="cta-row">
+        <a href="take-action.html" class="btn btn--lg">Speak up</a>
+        <a href="listen.html" class="btn btn--ghost btn--lg">Listen first</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="donate">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="Brave Voices — home">
+          <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='<span class=&quot;footer-logo-fallback&quot;>Brave<span>Voices</span></span>';" />
+        </a>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h4>Join the Brave Voices Movement</h4>
+          <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
+          <form class="subscribe" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email..." aria-label="Email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Follow us</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UC-Js3RyXuBAHlnI69CwZ6hQ" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100090236241817" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/bravevoicesbringchange/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="take-action.html">Speak</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Brave Voices. Speak even when your voice shakes.</span>
+        <a href="donate.html" class="btn" style="background:#fff; color:var(--rose);">Donate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="parallax.js" defer></script>
+  <script src="reveal.js" defer></script>
+  <script src="tabs.js" defer></script>
+</body>
+</html>

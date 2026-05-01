@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brave Voices — Speak even when your voice shakes</title>
+  <meta name="description" content="Brave Voices: choose courage over silence. Help protect children, support safe relationships, and prevent childhood sexual abuse." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+</head>
+<body>
+
+  <!-- Safety banner -->
+  <div class="safety-banner">
+    In immediate danger? Call <strong>911</strong>. To report child abuse, call the Childhelp National Hotline: <strong>1-800-422-4453</strong>.
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Brave Voices — home">
+        <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='Brave<span>Voices</span>';" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="listen.html">Listen</a></li>
+        <li><a href="take-action.html">Speak</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero (with video background) -->
+  <section class="hero hero--media">
+    <!-- Drop your file at assets/hero.mp4 (and optional assets/hero-poster.jpg) to replace the gradient fallback -->
+    <video
+      class="hero__media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="assets/hero-poster.jpg"
+      aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+
+    <div class="container">
+      <span class="eyebrow">Welcome to Brave Voices</span>
+      <h1>Speak even when<br/>your voice shakes.</h1>
+      <p class="mission">
+        At Brave Voices, we choose courage over silence. We use our voices to protect children, support safe relationships, and help prevent childhood sexual abuse.
+      </p>
+      <div class="cta-row">
+        <a href="learn.html" class="btn btn--lg">Start Learning</a>
+        <a href="take-action.html" class="btn btn--ghost btn--lg">Speak Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Identity: Who we are -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Who we are</span>
+          <h2>Breaking the silence breaks the cycle.</h2>
+          <p>
+            Child sexual abuse survives on the silence of adults — adults who were harmed and never told, adults who witnessed and didn't know what to say, adults who were taught that naming what happened was harder than carrying it. That silence is how abuse moves from one generation to the next.
+          </p>
+          <p>
+            Brave Voices believes prevention is the work of grown-ups, not children. When adult survivors speak — even when their voices shake — they change what the next child will face. Their stories become the warning, the permission, and the proof that another adult will listen. That is how the cycle ends.
+          </p>
+        </div>
+        <div>
+          <div class="quote-block">
+            <p style="font-family: var(--serif); font-style: italic; font-size: 1.35rem; color: var(--teal-dark); margin:0 0 1rem;">
+              "Never underestimate the power of a small group of committed people to change the world. In fact, it is the only thing that ever has."
+            </p>
+            <p style="font-family: var(--sans); font-size: 0.95rem; color: var(--teal-dark); margin:0; opacity:.8;">
+              — Margaret Mead
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Purpose: Four paths -->
+  <section class="section section--teal-soft">
+    <div class="container">
+      <div style="text-align:center; max-width:680px; margin: 0 auto 1rem">
+        <span class="eyebrow">How you can help</span>
+        <h2>Four ways to use your voice.</h2>
+        <p class="lede">Wherever you are in your understanding, there's a next step.</p>
+      </div>
+
+      <div class="cards cards--four">
+        <article class="card">
+          <h4>01 — Learn</h4>
+          <h3>Practice starting the conversation.</h3>
+          <p>Conversation frameworks, statistics, books, videos, and trusted organizations — a curated toolkit for adults learning to speak openly about what protects children.</p>
+          <a href="learn.html" class="card-link">Start learning →</a>
+        </article>
+
+        <article class="card">
+          <h4>02 — Listen</h4>
+          <h3>Hear the voices that broke the silence.</h3>
+          <p>Be inspired by survivors and advocates whose courage is ending the cycle — one story at a time.</p>
+          <a href="listen.html" class="card-link">Listen now →</a>
+        </article>
+
+        <article class="card">
+          <h4>03 — Speak</h4>
+          <h3>Share your story and build community.</h3>
+          <p>Share your lived experience and help create the conversations that protect the next child.</p>
+          <a href="take-action.html" class="card-link">Speak up →</a>
+        </article>
+
+        <article class="card">
+          <h4>04 — Contact</h4>
+          <h3>Reach out and stay connected.</h3>
+          <p>Ask a question, request a workshop, or tell us how Brave Voices can show up for your community.</p>
+          <a href="contact.html" class="card-link">Get in touch →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing invitation (CTA with background image) -->
+  <section class="section section--cta" style="--cta-bg: url('assets/cta-home.jpg');">
+    <div class="container">
+      <div class="cta-right">
+        <h2>Start where you are.</h2>
+        <p class="lede">
+          You don't have to fix everything. You just have to begin. One conversation, one piece of information, one brave voice at a time.
+        </p>
+        <div class="cta-row" style="justify-content:flex-end">
+          <a href="learn.html" class="btn btn--lg">Begin with Learn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="donate">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="Brave Voices — home">
+          <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='<span class=&quot;footer-logo-fallback&quot;>Brave<span>Voices</span></span>';" />
+        </a>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h4>Join the Brave Voices Movement</h4>
+          <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
+          <form class="subscribe" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email..." aria-label="Email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Follow us</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UC-Js3RyXuBAHlnI69CwZ6hQ" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100090236241817" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/bravevoicesbringchange/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="take-action.html">Speak</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Brave Voices. Speak even when your voice shakes.</span>
+        <a href="donate.html" class="btn" style="background:#fff; color:var(--rose);">Donate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="parallax.js" defer></script>
+  <script src="reveal.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Brave Voices</title>
+  <meta name="description" content="Get in touch with Brave Voices. Ask a question, request a workshop, share feedback, or tell us how we can help." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+</head>
+<body>
+
+  <div class="safety-banner">
+    In immediate danger? Call <strong>911</strong>. To report child abuse, call the Childhelp National Hotline: <strong>1-800-422-4453</strong>.
+  </div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Brave Voices — home">
+        <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='Brave<span>Voices</span>';" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="listen.html">Listen</a></li>
+        <li><a href="take-action.html">Speak</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="donate.html" class="btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page hero (gradient + split layout) -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <span class="eyebrow">Contact</span>
+          <h1>We would love<br/>to hear from you.</h1>
+          <p class="lede">
+            Questions about a workshop, a story you'd like to share, a partnership, or just a note to say the work matters — we read everything, and a human writes back.
+          </p>
+        </div>
+        <div class="page-hero__image">
+          <img src="assets/contact-hero.jpg" alt="" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact form -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split-text">
+          <span class="eyebrow">Send a message</span>
+          <h2>Get in touch.</h2>
+          <p>
+            Whatever you'd like to share — a question, a story, an idea, an invitation to volunteer — the form on this page is the best way to reach us. A real person reads every message and writes back.
+          </p>
+          <p>
+            If you have any technical questions or feedback about the website (e.g., a link isn't working), contact our help desk at <strong><a href="mailto:bravevoices.help@gmail.com">bravevoices.help@gmail.com</a></strong>.
+          </p>
+
+          <figure class="founders-figure">
+            <img src="assets/founders.jpg" alt="Cheryle and Beth celebrating together at a working session" onerror="this.parentNode.style.display='none'" />
+            <figcaption>Our founder, Cheryle (right), and founding member, Beth (left).</figcaption>
+          </figure>
+        </div>
+
+        <div>
+          <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-success').hidden = false;">
+            <div class="form-row">
+              <label for="contact-name">Your name</label>
+              <input id="contact-name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="form-row">
+              <label for="contact-email">Email address</label>
+              <input id="contact-email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="form-row">
+              <label for="contact-topic">What is this about?</label>
+              <select id="contact-topic" name="topic" required>
+                <option value="" disabled selected>Choose a topic…</option>
+                <option value="general">General question</option>
+                <option value="story">I'd like to share my story</option>
+                <option value="workshop">Request a workshop</option>
+                <option value="partnership">Partnership or collaboration</option>
+                <option value="donation">Donation or financial question</option>
+                <option value="press">Media / press inquiry</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="contact-message">Your message</label>
+              <textarea id="contact-message" name="message" rows="6" required placeholder="Share as much or as little as you'd like..."></textarea>
+            </div>
+            <div class="form-row form-row--inline">
+              <input id="contact-consent" name="consent" type="checkbox" required />
+              <label for="contact-consent">I understand Brave Voices will only use my message to respond — not to add me to a mailing list.</label>
+            </div>
+            <button type="submit" class="btn btn--lg">Send with care</button>
+            <p id="form-success" class="form-success" hidden>
+              Thank you — your message is on its way. A real person will read it and write back.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--alt">
+    <div class="container">
+      <div style="text-align:center; max-width:680px; margin: 0 auto 2.5rem">
+        <span class="eyebrow">In their words</span>
+        <h2>Voices of the community.</h2>
+        <p class="lede">
+          These notes come from parents, educators, survivors, and neighbors who've found something useful here. We share them with permission, and with names changed where it felt safer to.
+        </p>
+      </div>
+
+      <div class="carousel testimonial-carousel" data-carousel aria-roledescription="carousel" aria-label="Testimonials">
+        <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous testimonial">&#x2039;</button>
+
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <article class="card testimonial" role="group" aria-roledescription="slide" aria-label="1 of 4">
+              <p class="testimonial__quote">"Cheryle Gail is the quintessential practitioner and guide of NVC practices. Her natural warmth and humor, along with her deep lived experiences, have made her a teacher of rare wisdom and kindness."</p>
+              <div class="testimonial__meta">
+                <strong>Nancy Reyering</strong>
+              </div>
+            </article>
+
+            <article class="card testimonial" role="group" aria-roledescription="slide" aria-label="2 of 4">
+              <p class="testimonial__quote">"Cheryle is a strong and wise presence in a group, with a guiding personality that allows for all emotions to come forward and be heard, and a rather brave and compassionate vibe that ensures these emotions will be held responsibly and kindly."</p>
+              <div class="testimonial__meta">
+                <strong>Sam Stern</strong>
+              </div>
+            </article>
+
+            <article class="card testimonial" role="group" aria-roledescription="slide" aria-label="3 of 4">
+              <p class="testimonial__quote">"Cheryle's calm energy was inviting, her empathic reflection was grounding, and her patience was reassuring. Though learning about the language of 'chooser' and inner critic was new to me and I didn't have much clarity around what I needed, I appreciate her guidance around checking in with my body, re-assessing what I needed, and if the conversation aligned with what I was looking for when I entered the conversation."</p>
+              <div class="testimonial__meta">
+                <strong>Jasmin</strong>
+              </div>
+            </article>
+
+            <article class="card testimonial" role="group" aria-roledescription="slide" aria-label="4 of 4">
+              <p class="testimonial__quote">"For many years now, Cheryle Gail and I have assisted Jean Morrison (MA in Psychology, Counseling &amp; Wholistic Health, Co-Founder of NVC Santa Cruz and Certified NVC trainer) in her 2 and 5 day residential NVC / Compassionate Communication workshops at Esalen Institute in Big Sur, California. Cheryle always fills the room with safety, service, trust, love, kindness, presence, and competence. The rudiments of Marshall Rosenberg's teachings are integrated into Cheryle's heart — she lives her practice of compassionate communication. At workshops I always witness Cheryle showing up for herself, for Jean, for me, and for the participants — on time, on point, and with deep willingness, authenticity, and integrity. Her playful and skillful practice of NVC — improv with Jackal and Giraffe ears on, 'Empathy Poker,' 'Empathy NOT,' a helpful comment in response to a question, or simply providing empathy — is always a blessing. Cheryle is deeply loving, wise, self-responsible, humble, kind, and dedicated: a big compassionate heart on legs."</p>
+              <div class="testimonial__meta">
+                <strong>Eric Schneider</strong>
+                <span>NVC workshop assistant, Esalen Institute</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next testimonial">&#x203A;</button>
+
+        <div class="carousel__dots" role="tablist" aria-label="Choose testimonial"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA (with background image) -->
+  <section class="section section--cta" style="--cta-bg: url('assets/cta-contact.jpg');">
+    <div class="container narrow" style="text-align:center">
+      <h2>Whatever brought you here, thank you.</h2>
+      <p class="lede">
+        Reaching out matters — even when the thing you're reaching out about is small, uncertain, or hard to put into words. If this work resonates, you can also stand with us.
+      </p>
+      <div class="cta-row">
+        <a href="donate.html" class="btn btn--lg">Donate</a>
+      </div>
+      <p class="mission" style="font-family:var(--serif); font-style:italic; font-size:1.45rem; margin-top:2rem">
+        Speak even when your voice shakes.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="Brave Voices — home">
+          <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='<span class=&quot;footer-logo-fallback&quot;>Brave<span>Voices</span></span>';" />
+        </a>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h4>Join the Brave Voices Movement</h4>
+          <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
+          <form class="subscribe" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email..." aria-label="Email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Follow us</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UC-Js3RyXuBAHlnI69CwZ6hQ" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100090236241817" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/bravevoicesbringchange/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="take-action.html">Speak</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Brave Voices. Speak even when your voice shakes.</span>
+        <a href="donate.html" class="btn" style="background:#fff; color:var(--rose);">Donate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="parallax.js" defer></script>
+  <script src="reveal.js" defer></script>
+  <script src="carousel.js" defer></script>
+</body>
+</html>

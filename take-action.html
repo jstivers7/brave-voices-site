@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speak — Brave Voices</title>
+  <meta name="description" content="Report, share your story, and build community. Practical pathways to turn courage into action and protect the next child." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+</head>
+<body>
+
+  <div class="safety-banner">
+    In immediate danger? Call <strong>911</strong>. To report child abuse, call the Childhelp National Hotline: <strong>1-800-422-4453</strong>.
+  </div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a href="index.html" class="logo" aria-label="Brave Voices — home">
+        <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='Brave<span>Voices</span>';" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="listen.html">Listen</a></li>
+        <li><a href="take-action.html" class="active">Speak</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page hero (gradient + split layout) -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__text">
+          <span class="eyebrow">Speak</span>
+          <h1>Now it's your turn<br/>to speak up.</h1>
+          <p class="lede">
+            Tell the story that needs telling, or show up for the community that needs you. Either path protects the next child. Either one breaks a piece of the silence. Start with whichever fits where you are today.
+          </p>
+        </div>
+        <div class="page-hero__image">
+          <img src="assets/take-action-hero.jpg" alt="" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The full playbook: tabbed paths -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">Two paths, one movement</span>
+      <h2>Choose your way in.</h2>
+      <p class="lede" style="max-width: 60%">Every action matters — whether you're sharing your story or showing up for your community. Tap through to find the one that fits where you are today.</p>
+
+      <div class="tabs tabs--plain" role="tablist" aria-label="Speak paths">
+        <button class="tab" role="tab" id="share" aria-selected="true" aria-controls="panel-share" tabindex="0">Share your story</button>
+        <button class="tab" role="tab" id="community" aria-selected="false" aria-controls="panel-community" tabindex="-1">Build community</button>
+      </div>
+
+      <!-- Panel: Share your story -->
+      <div id="panel-share" class="tab-panel" role="tabpanel" aria-labelledby="share">
+        <div class="tab-image">
+          <a href="https://youtu.be/yfWzFPkWznY" target="_blank" rel="noopener" aria-label="Watch 'Speak Up' on YouTube" style="display:block; width:100%; height:100%;">
+            <img src="assets/share-story-preview.png" alt="Speak Up — watch on YouTube" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/yfWzFPkWznY/maxresdefault.jpg';" />
+          </a>
+        </div>
+        <h3 style="margin-top:0">How to share your story</h3>
+
+        <p>If you are a survivor: your story is yours. You owe it to no one. And — when and if you choose to tell it — it can move something in the world that nothing else can. Stories are how silence breaks.</p>
+
+        <ul class="checklist">
+          <li><strong>Tell someone safe first.</strong> Before any public sharing, tell one trusted person — a therapist, a friend, a hotline counselor. Saying it out loud in safety changes what it means to say it again.</li>
+          <li><strong>Decide who the story is for.</strong> A survivor support group, a journal, a podcast, a policymaker, the child you used to be. Different audiences ask different things of you.</li>
+          <li><strong>Protect your nervous system.</strong> Set a time limit. Have a grounding plan for after. Know you can stop at any point — mid-sentence, mid-interview, mid-movement.</li>
+          <li><strong>You can share anonymously.</strong> RAINN, StoryCorps, and many survivor organizations collect stories without names.</li>
+          <li><strong>You don't have to share the worst parts.</strong> Sharing what healing looks like is just as powerful as sharing what happened.</li>
+        </ul>
+
+        <div class="quote-block" style="margin-top:2rem; text-align:center">
+          <span class="eyebrow" style="color:var(--rose)">If you'd like to share with us</span>
+          <p>Brave Voices collects stories with StoryCorps — in your words, at your pace, with whatever boundaries you name — to help other survivors know they are not alone.</p>
+          <a href="#speak" class="btn btn--lg" style="margin-top:.5rem">Record your story →</a>
+        </div>
+      </div>
+
+      <!-- Panel: Build community -->
+      <div id="panel-community" class="tab-panel" role="tabpanel" aria-labelledby="community" hidden>
+        <div class="tab-image"><img src="assets/tabs/build-community.jpg" alt="" onerror="this.style.display='none'" /></div>
+        <h3 style="margin-top:0">Community action</h3>
+        <p>Child safety is not built by experts alone. It's built by the adults who show up — the neighbor, the coach, the aunt, the teacher, the parent at pickup. Prevention lives in everyday places. Here's how to strengthen it where you already are.</p>
+
+        <ul class="checklist">
+          <li><strong>Learn and host a training.</strong> Darkness to Light's "Stewards of Children" is a two-hour evidence-based training you can bring to your school, faith community, or workplace. <a href="https://www.d2l.org/" target="_blank" rel="noopener">d2l.org</a></li>
+          <li><strong>Ask the right questions.</strong> Ask the organizations that serve your kids — schools, camps, sports, places of worship — about their child protection policies, background checks, and two-adult rules. Your questions tell them it matters.</li>
+          <li><strong>Be a safe adult.</strong> Name yourself as one. Tell the kids in your life: <em>"If anything ever feels wrong, you can tell me. I will believe you. I will not be angry."</em> Repeat it until they know you mean it.</li>
+          <li><strong>Share this site.</strong> The adults in a child's life are the child's best protection. Make sure every adult you know has seen this.</li>
+          <li><strong>Advocate.</strong> Contact your state legislators about statutes of limitations reform, mandatory reporter laws, and funding for child advocacy centers.</li>
+          <li><strong>Give.</strong> Local child advocacy centers, survivor-led organizations, and prevention nonprofits run on small, recurring gifts. <a href="donate.html">Supporting Brave Voices</a> is one way — supporting any of them is another.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script src="tabs.js" defer></script>
+
+  <!-- Speak: record your story -->
+  <section class="section" id="speak">
+    <div class="container narrow">
+      <span class="eyebrow">Record your story</span>
+      <h2>Follow these steps to have your lived experience heard and documented.</h2>
+      <p class="lede">Click each step to expand. You'll move between Brave Voices and StoryCorps along the way.</p>
+
+      <div class="steps">
+
+        <details class="step" open>
+          <summary>
+            <span class="step__num">01</span>
+            <span class="step__title">Get set up</span>
+          </summary>
+          <div class="step__body">
+            <p><strong>Create your StoryCorps account.</strong> Sign in on <a href="https://archive.storycorps.org/" target="_blank" rel="noopener">Archive StoryCorps</a> to create your account, then visit the <a href="#" target="_blank" rel="noopener">Brave Voices Community page</a> and click "Join" to add yourself to our community.</p>
+            <p><strong>Choose your interview partner.</strong> Pick someone you trust, love, and can depend on — a family member, friend, therapist, empathy buddy, sponsor, or fellow Brave Voices Community member you've connected with. Invite them to sign up for an Archive StoryCorps account and join the community too.</p>
+            <p><strong>Plan your questions.</strong> Use our <a href="#" target="_blank" rel="noopener">Suggested Questions</a> or write your own — aim for 6–8 questions over a 40-minute interview. Print them out, read through them, and cross out anything that doesn't pertain to you or that you don't want to answer. <a href="#" target="_blank" rel="noopener">Watch an example of choosing your questions.</a></p>
+            <p class="step__note">Notice: you will leave bravevoices.org when you click these links.</p>
+          </div>
+        </details>
+
+        <details class="step">
+          <summary>
+            <span class="step__num">02</span>
+            <span class="step__title">Sign the consent forms</span>
+          </summary>
+          <div class="step__body">
+            <p><strong>Brave Voices Disclaimer, Consent and Release.</strong> Before you record your interview, please read and sign the form for interviews <a href="#" target="_blank" rel="noopener">here</a>.</p>
+            <p><strong>StoryCorps consent.</strong> Anyone featured in an interview must consent to it being uploaded to archive.storycorps.org. Read and agree to <a href="#" target="_blank" rel="noopener">Terms of Use</a>, <a href="#" target="_blank" rel="noopener">Community Guidelines</a>, and <a href="#" target="_blank" rel="noopener">Privacy Policy</a> prior to doing your interview.</p>
+            <p class="step__note">Notice: you will leave bravevoices.org when you click these links.</p>
+          </div>
+        </details>
+
+        <details class="step">
+          <summary>
+            <span class="step__num">03</span>
+            <span class="step__title">Record your conversation</span>
+          </summary>
+          <div class="step__body">
+            <p>Make sure both you and your partner are <a href="https://archive.storycorps.org/" target="_blank" rel="noopener">logged in</a> on the StoryCorps Archive, and visit the <a href="#" target="_blank" rel="noopener">StoryCorps Connect recording page</a>.</p>
+            <p>Before you start, mute your phone, shut doors, and do whatever you can to eliminate outside noise. When you're ready, send the interview link to your partner. Once they're on the feed with you, click "Start recording" and proceed with the interview.</p>
+            <p class="step__note">Notice: you will leave bravevoices.org when you click these links.</p>
+          </div>
+        </details>
+
+        <details class="step">
+          <summary>
+            <span class="step__num">04</span>
+            <span class="step__title">Save and share your interview</span>
+          </summary>
+          <div class="step__body">
+            <p>When you're done, click "Stop recording," then "Save interview." If you're the organizer, add a title and keywords.</p>
+            <p>You'll be prompted to select your privacy settings — share your interview with the world, or save it for friends and family. To share it with the Brave Voices Community, select "StoryCorps Community" or "Public" under <em>Who can listen to this interview</em>. Then select the "Brave Voices" community under <em>Add your interview to a community</em>. Click "Save."</p>
+            <p class="step__note">Note: if you post an interview for the Brave Voices Community that contains a redaction or other edits, this language will be included in the post copy: <em>This story reflects the brave voice's present recollections of experiences over time. Some names and characteristics have been changed in the interest of privacy.</em></p>
+          </div>
+        </details>
+
+      </div>
+
+      <p class="step__notice">
+        By following these steps, your interview will be recorded on Archive StoryCorps' website — and you will leave bravevoices.org.
+      </p>
+
+      <p style="text-align:center; margin-top:2rem">
+        Have any questions? <a href="mailto:hello@bravevoices.org">Contact us</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="section section--alt">
+    <div class="container narrow">
+      <span class="eyebrow">Resources</span>
+      <h2>Organizations doing this work.</h2>
+      <ul class="checklist">
+        <li><strong>Childhelp</strong> — <a href="https://www.childhelp.org/" target="_blank" rel="noopener">childhelp.org</a> — 1-800-422-4453</li>
+        <li><strong>RAINN</strong> — <a href="https://www.rainn.org/" target="_blank" rel="noopener">rainn.org</a> — 1-800-656-4673</li>
+        <li><strong>Darkness to Light</strong> — <a href="https://www.d2l.org/" target="_blank" rel="noopener">d2l.org</a> — prevention training</li>
+        <li><strong>NCMEC</strong> — <a href="https://www.missingkids.org/" target="_blank" rel="noopener">missingkids.org</a> — online exploitation reporting</li>
+        <li><strong>Stop It Now!</strong> — <a href="https://www.stopitnow.org/" target="_blank" rel="noopener">stopitnow.org</a> — confidential helpline for anyone concerned about behavior</li>
+        <li><strong>StoryCorps</strong> — <a href="https://storycorps.org/" target="_blank" rel="noopener">storycorps.org</a> — record your story for the Library of Congress</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Closing CTA (with background image) -->
+  <section class="section section--cta" style="--cta-bg: url('assets/cta-take-action.jpg');">
+    <div class="container narrow" style="text-align:center">
+      <h2>Fund the next brave voice.</h2>
+      <p class="lede">
+        Reporting, sharing, and building community are the heart of this work — and they depend on people who quietly keep the lights on. Your gift funds the trainings, the story archive, and the resources that let adults show up for kids.
+      </p>
+      <div class="cta-row" style="margin-top:2rem; justify-content:center">
+        <a href="donate.html" class="btn btn--lg">Donate to Brave Voices</a>
+      </div>
+      <p class="mission" style="font-family:var(--serif); font-style:italic; font-size:1.25rem; margin-top:2.25rem; opacity:.9">
+        Every gift — of any size — helps a child somewhere feel safer tonight.
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="donate">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html" aria-label="Brave Voices — home">
+          <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='<span class=&quot;footer-logo-fallback&quot;>Brave<span>Voices</span></span>';" />
+        </a>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h4>Join the Brave Voices Movement</h4>
+          <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
+          <form class="subscribe" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email..." aria-label="Email" required />
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+        <div>
+          <h4>Follow us</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UC-Js3RyXuBAHlnI69CwZ6hQ" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100090236241817" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/bravevoicesbringchange/" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="take-action.html">Speak</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Brave Voices. Speak even when your voice shakes.</span>
+        <a href="donate.html" class="btn" style="background:#fff; color:var(--rose);">Donate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="parallax.js" defer></script>
+  <script src="reveal.js" defer></script>
+</body>
+</html>
