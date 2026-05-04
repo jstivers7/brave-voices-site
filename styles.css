@@ -1500,17 +1500,17 @@ img.hero__media {
 }
 
 /* ---------- Givebutter donate widget ---------- */
-/* The Givebutter widget renders its own ~400px-wide form. The custom
-   element itself stretches to full container width, so we constrain
-   it with max-width and center it with auto margins. */
+/* The Givebutter widget renders its own form at its natural width.
+   Use flex to center the widget element regardless of its width. */
 .donate-embed {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
-  text-align: center;
 }
 .donate-embed givebutter-widget {
   display: block;
-  max-width: 480px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* ---------- Timeline ---------- */
