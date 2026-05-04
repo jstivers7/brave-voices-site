@@ -1510,6 +1510,7 @@ img.hero__media {
 }
 .donate-embed givebutter-widget {
   display: block;
+  width: 325px;
   margin: 0;
 }
 
