@@ -33,7 +33,7 @@ Home (index.html) — video background
 
 Inner pages — hero image (right side of the gradient header)
 ------------------------------------------------------------
-The five inner pages each have a brand-gradient header (turquoise → pink)
+The six inner pages each have a brand-gradient header (turquoise → pink)
 with the page title on the left and an image on the right. The image cell
 is landscape 4:3, so use a landscape or square image — portrait will be
 cropped to fit. Aim for ~1200x900 (4:3).
@@ -41,6 +41,7 @@ cropped to fit. Aim for ~1200x900 (4:3).
   learn-hero.jpg          Hero image for learn.html
   listen-hero.jpg         Hero image for listen.html
   take-action-hero.jpg    Hero image for take-action.html
+  who-we-are-hero.jpg     Hero image for who-we-are.html
   contact-hero.jpg        Hero image for contact.html
   donate-hero.jpg         Hero image for donate.html
 
@@ -51,6 +52,7 @@ CTA sections — image background (one per page)
   cta-learn.jpg           Bottom CTA on learn.html
   cta-listen.jpg          Bottom CTA on listen.html
   cta-take-action.jpg     "Thank you for being brave." on take-action.html
+  cta-who-we-are.jpg      "Want to be part of this?" on who-we-are.html
   cta-contact.jpg         Bottom CTA on contact.html
   cta-donate.jpg          "Thank you for standing with us." on donate.html
 
@@ -61,20 +63,24 @@ Every tab on the Learn page has an image element on the right side of the
 tab content (it sticks below the nav as you scroll). 16:9 ratio works best
 (e.g., 1280x720). All files live under `assets/tabs/`.
 
+Tabs marked [embedded video — image not used] now show the YouTube video
+directly in the right column instead of a static image. You can skip those
+slots entirely. The image-using tabs are listed alongside.
+
   Tools for the conversation (3 tabs):
     sex-positive-families.jpg     Sex-Positive Families
     nvc.jpg                       Nonviolent Communication
     uncomfortable-conversation.jpg An uncomfortable conversation
 
   Video & Audio Resources (10 tabs):
-    jane-epstein.jpg              Jane Epstein
+    jane-epstein.jpg              [embedded video — image not used]
     nssa-conference.jpg           NSSA Conference 2022
-    rena-romano.jpg               Rena Romano
-    yvette-erasmus.jpg            Dr. Yvette Erasmus
+    rena-romano.jpg               [embedded video — image not used]
+    yvette-erasmus.jpg            [embedded video — image not used]
     feather-berkower.jpg          Feather Berkower
-    sarri-gillman.jpg             Sarri Gillman
-    ladonna-silva.jpg             LaDonna Silva
-    rachael-herron.jpg            Rachael Herron
+    sarri-gillman.jpg             [embedded video — image not used]
+    ladonna-silva.jpg             [embedded video — image not used]
+    rachael-herron.jpg            [embedded video — image not used]
     nvc-academy.jpg               NVC Academy
     practice-groups.jpg           Practice Groups (free/donation-based)
     podcasts.jpg                  Podcasts
@@ -83,35 +89,103 @@ tab content (it sticks below the nav as you scroll). 16:9 ratio works best
 Listen page — Featured stories tab images (assets/tabs/)
 --------------------------------------------------------
 The Featured stories section on listen.html uses the same tab pattern as
-the Learn page. Six tabs, each with a 16:9 image on the right.
+the Learn page. Five tabs total. Tabs marked [embedded video — image not
+used] now render a YouTube embed on the right; you can skip those slots.
 
-    brave-voice-story.jpg         A Brave Voice (anonymous man's story)
-    cheryle-gail-story.jpg        Cheryle Gail's story
-    guerry-glover.jpg             Guerry Glover's 2014 survivor story
-    david-moody.jpg               David Moody's 2014 survivor story
-    jameela-jamil.jpg             Jameela Jamil — "How Lolita Freed Me…"
+    brave-voice-story.jpg         [embedded video — image not used]
+    cheryle-gail-story.jpg        [embedded video — image not used]
+    guerry-glover.jpg             [embedded video — image not used]
+    david-moody.jpg               [embedded video — image not used]
     after-neverland.jpg           After Neverland (Wade Robson & James Safechuck with Oprah)
 
 
 Listen page — StoryCorps interviews tab images (assets/tabs/)
 -------------------------------------------------------------
 The StoryCorps interviews section on listen.html uses the same tab pattern.
-Four tabs, each with a 16:9 image on the right.
+Five tabs total. Tabs marked [embedded video — image not used] now render
+a YouTube embed on the right; you can skip those slots.
 
-    cheryle-storycorps.jpg        Cheryle's full StoryCorps interview
-    cheryle-debrief.jpg           Debrief with Cheryle after her interview
-    hollis-wilder.jpg             Hollis Wilder decompression video
-    laura-davis.jpg               Laura Davis interviewed by Cheryle Gail Grace
+    cheryle-storycorps.jpg        Cheryle's full StoryCorps interview (Archive StoryCorps audio)
+    cheryle-debrief.jpg           [embedded video — image not used]
+    hollis-wilder.jpg             [embedded video — image not used]
+    laura-davis.jpg               Laura Davis interviewed by Cheryle Gail Grace (Archive StoryCorps audio)
+    storycorps-archive.jpg        "More on StoryCorps" tab — link to the full Brave Voices community archive
 
 
 Listen page — "I Am A Survivor" short film
 ------------------------------------------
-The "I Am A Survivor" short-film section on listen.html shows a single
-image on the right (split layout, like the "How to listen well" section).
-Use a still or poster from the film. 16:9 ratio (640x360 or larger,
-e.g., 1280x720) works best.
+The "I Am A Survivor" section on listen.html now embeds the Vimeo video
+directly in the right column — no static image is needed.
 
-  i-am-a-survivor.jpg       Poster / still for the short film section
+  i-am-a-survivor.jpg       [embedded video — image not used] Previously
+                            used as a poster/still on the right; the
+                            section now plays the Vimeo video in place.
+                            File can be deleted.
+
+
+Who We Are page — Founder + founding member section images (assets/team/)
+-------------------------------------------------------------------------
+The Founder's story section on who-we-are.html shows a 4:3 landscape
+image above Cheryle's YouTube video. The Founding member section uses a
+section-image on the right (4:5 portrait). Use clear photographs at the
+sizes below or larger.
+
+  cheryle.jpg               Cheryle Gail Grace — image above her video.
+                            4:3 ratio works best (e.g., 1200x900). Until
+                            you drop the file in, the brand teal->rose
+                            gradient shows.
+  beth.jpg                  Beth (founding member) — section image
+                            (4:5 portrait, ~800x1000).
+
+
+Who We Are page — Board, advisor, and staff cards (assets/team/)
+----------------------------------------------------------------
+The Board, Advisors, and Team sections on who-we-are.html show team cards
+with a 1:1 (square) headshot on top and a name/role/bio underneath. Use
+square headshots, around 800x800 or larger. Until you drop the file in,
+each card shows the brand teal->rose gradient — never broken.
+
+Update or add filenames as the team grows; the HTML uses these names by
+default (replace as you replace the placeholder cards in who-we-are.html):
+
+  Board:
+    rowena-wahid.jpg        Rowena Wahid (CFO & Secretary)
+    maureen-flannigan.jpg   Maureen Flannigan (Director & Producer)
+    (Add more named files here as the board grows.)
+
+  Advisors:
+    cedric-de-brito.jpg     Cedric De Brito (Technical Advisor)
+    ladonna-silva.jpg       LaDonna Silva, M.A., LMFT
+    jean-morrison.jpg       Jean Morrison, M.A.
+
+  Team / Staff:
+    jeannie-stivers.jpg     Jeannie Stivers (Web Designer & Developer)
+    lisa-frye.jpg           Lisa Frye (Social Media Manager)
+
+
+Listen page — "In the public eye" portraits (assets/celebrities/)
+-----------------------------------------------------------------
+The "You are not the only one." section on listen.html shows nine cards,
+each a portrait of a public figure with text overlaid on top. The cards
+use a 3:4 portrait aspect ratio — use vertical/portrait headshots
+(roughly 600x800 to 900x1200 each, JPG or WebP).
+
+A dark gradient is layered over the bottom of each image so the text is
+always readable, regardless of which photo you choose. Faces should sit
+in the upper two-thirds of the frame so they aren't covered by the text.
+
+Until you drop the image in, each card shows the brand teal->rose
+gradient — never broken, just unphotographed.
+
+  maya-angelou.jpg          Maya Angelou
+  oprah-winfrey.jpg         Oprah Winfrey
+  tyler-perry.jpg           Tyler Perry
+  common.jpg                Common
+  anthony-edwards.jpg       Anthony Edwards
+  anthony-rapp.jpg          Anthony Rapp
+  sally-field.jpg           Sally Field
+  demi-moore.jpg            Demi Moore
+  mary-j-blige.jpg          Mary J. Blige
 
 
 Learn page — Book covers (assets/books/)
@@ -140,24 +214,21 @@ Learn page — Handouts column image
                             e.g., 800x1200.
 
 
-Speak page — video preview
---------------------------
-  share-story-preview.png   Preview image for the "Speak Up" video in the
-                            Share Your Story tab. Clicking opens the video
-                            on YouTube. If missing, falls back to YouTube's
-                            own thumbnail. 16:9 ratio, 1280x720 or larger.
-
-
 Speak page — Tab images (assets/tabs/)
 --------------------------------------
 The "Two paths, one movement" tabs on take-action.html use the same
-sticky right-rail image pattern as the Learn page. The Share Your Story
-tab uses share-story-preview.png (above) as its tab image — clicking it
-opens the YouTube video. The Build Community tab uses:
+sticky right-rail pattern as the Learn page. The Share Your Story tab
+now embeds the "Speak Up" YouTube video directly — no preview image
+needed for that tab. The Build Community tab uses:
 
   build-community.jpg       Image for the Build Community tab. 16:9 ratio
                             (1280x720 is plenty). Lives under
                             `assets/tabs/` to match the Learn page tabs.
+
+  share-story-preview.png   [embedded video — image not used] Previously
+                            used as a clickable preview that opened the
+                            video on YouTube; the tab now plays the video
+                            in place. File can be deleted.
 
 
 Contact page — founders figure
@@ -206,16 +277,25 @@ Notes
   lowercase + hyphens exactly as listed above.
 
 
-Previewing the donate page
---------------------------
-The Givebutter donation form on donate.html will NOT render when the site
-is opened via `file://` (e.g., double-clicking the HTML from your C drive).
-Givebutter's widget script requires an http/https origin to boot.
+Previewing locally — the file:// gotcha
+---------------------------------------
+A few things on this site need a real http/https origin to work, and will
+either show errors or quietly refuse to load when you open the HTML
+directly from your hard drive (i.e. via `file://`):
 
-To preview the donate form locally:
+  - The Givebutter donation form on donate.html
+  - All embedded YouTube videos (a "Video configuration error" appears in
+    each player on listen.html, learn.html, take-action.html)
+
+These all behave normally once the site is hosted on a real URL. So if
+you only see the issue when double-clicking the HTML on your computer,
+nothing is broken — it's just a quirk of opening files directly.
+
+To preview everything locally with a real origin:
   1. Open a terminal in the `Brave Voices website` folder.
   2. Run:  python -m http.server 8000
-  3. Visit: http://localhost:8000/donate.html
+  3. Visit: http://localhost:8000/donate.html (or any other page).
 
-Or just deploy to a staging URL (Netlify, Vercel, GitHub Pages, etc.) and
-check there. Once the site is on a real host, the form renders automatically.
+Or just deploy to a staging URL (Netlify, Vercel, GitHub Pages, etc.).
+Once the site is on a real host, the donate form and YouTube embeds both
+work automatically.
