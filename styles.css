@@ -489,6 +489,29 @@ img.hero__media {
   .cards--four { grid-template-columns: 1fr; }
 }
 
+/* Forced 3-column layout. Useful when a card grid has fewer than 3 items
+   but you still want them sized as if there were 3 (so they don't stretch). */
+.cards--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1024px) {
+  .cards--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .cards--three { grid-template-columns: 1fr; }
+}
+
+/* Centered card layout. Cards stay at a moderate fixed width and the group
+   is centered horizontally within the container. Useful when there are
+   fewer cards than would fill a row and you don't want them to stretch. */
+.cards--centered {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+  justify-content: center;
+}
+@media (max-width: 560px) {
+  .cards--centered { grid-template-columns: 1fr; }
+}
+
 /* Book cards — cover at top, then title/author/blurb */
 .book-card {
   padding: 1.25rem;
@@ -554,6 +577,27 @@ img.hero__media {
   display: block;
 }
 
+/* Tab-video: same shape/placement as .tab-image but holds a YouTube iframe.
+   .video-embed is for inline embeds inside tab body content (not the rail). */
+.tab-video,
+.video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--teal-soft), var(--rose-soft));
+  box-shadow: var(--shadow-sm);
+}
+.tab-video { margin-bottom: 1.5rem; }
+.video-embed { margin: 1.5rem 0; }
+.tab-video iframe,
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* On wider screens, float image to the right of tab content */
 @media (min-width: 900px) {
   .tab-panel {
@@ -566,7 +610,8 @@ img.hero__media {
     grid-column: 1;
     min-width: 0;
   }
-  .tab-panel > .tab-image {
+  .tab-panel > .tab-image,
+  .tab-panel > .tab-video {
     grid-column: 2;
     grid-row: 1 / span 99;
     margin-bottom: 0;
@@ -574,7 +619,7 @@ img.hero__media {
     position: sticky;
     top: 130px;
   }
-  /* Variant: image + supporting content (e.g. a framing quote) share the right rail */
+  /* Variant: image/video + supporting content (e.g. a framing quote) share the right rail */
   .tab-panel > .tab-rail {
     grid-column: 2;
     grid-row: 1 / span 99;
@@ -582,7 +627,8 @@ img.hero__media {
     position: sticky;
     top: 130px;
   }
-  .tab-panel > .tab-rail .tab-image {
+  .tab-panel > .tab-rail .tab-image,
+  .tab-panel > .tab-rail .tab-video {
     margin-bottom: 0;
     position: static;
   }
@@ -610,13 +656,11 @@ img.hero__media {
 }
 .handouts-image {
   width: 100%;
-  aspect-ratio: 4 / 6;
+  aspect-ratio: 4 / 5;
   background: linear-gradient(135deg, var(--teal-soft), var(--rose-soft));
   border-radius: var(--radius);
   overflow: hidden;
   align-self: start;
-  position: sticky;
-  top: 130px;
 }
 .handouts-image img {
   width: 100%;
@@ -772,6 +816,132 @@ img.hero__media {
   display: inline-block;
   margin-top: .5rem;
   font-weight: 600;
+}
+
+/* ---------- Team card: square photo on top, bio below ---------- */
+/* Used on who-we-are.html for board, advisors, and staff cards. */
+.team-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--rose);
+}
+.team-card__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, var(--teal-soft), var(--rose-soft));
+  overflow: hidden;
+}
+.team-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.team-card__body {
+  padding: 1.5rem;
+}
+.team-card__body h3 {
+  margin: 0 0 .25rem;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--teal);
+}
+.team-card__role {
+  font-size: .82rem;
+  color: var(--rose);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin: 0 0 .75rem;
+  font-weight: 600;
+}
+.team-card__bio {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ---------- Portrait card: image background with text overlay ---------- */
+/* Used in the "In the public eye" section on listen.html.
+   Full-bleed image, dark gradient at the bottom, text overlaid in white. */
+.card--portrait {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  color: #fff;
+  /* Gradient fallback shows if the portrait image is missing */
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 55%, var(--rose) 100%);
+  box-shadow: var(--shadow);
+}
+.card--portrait:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  border-color: transparent;
+}
+.card--portrait > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  transition: transform .35s ease;
+}
+.card--portrait:hover > img {
+  transform: scale(1.04);
+}
+.card--portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 35, 35, .94) 0%,
+    rgba(15, 35, 35, .80) 30%,
+    rgba(15, 35, 35, .25) 65%,
+    rgba(15, 35, 35, 0) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+.card--portrait .card-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 1.35rem 1.35rem;
+  z-index: 3;
+}
+.card--portrait .card-text h4 {
+  color: rgba(255, 255, 255, .9);
+  margin: 0 0 .35rem;
+  font-size: .78rem;
+  letter-spacing: .08em;
+}
+.card--portrait .card-text h3 {
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin: 0 0 .55rem;
+}
+.card--portrait .card-text p {
+  color: rgba(255, 255, 255, .92);
+  font-size: .9rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ---------- Quote / script blocks ---------- */
@@ -1392,6 +1562,19 @@ img.hero__media {
 }
 .split--alt .split-text { order: 2; }
 
+/* Variant: right-column media (image or video) sticks below the nav while
+   the left-column copy scrolls past, mirroring the tab-panel behavior. */
+.split--sticky-rail {
+  align-items: start;
+}
+@media (min-width: 821px) {
+  .split--sticky-rail > div:nth-child(2) {
+    position: sticky;
+    top: 130px;
+    align-self: start;
+  }
+}
+
 /* ---------- Scroll reveal ---------- */
 /* JS adds .reveal to targeted elements on load, then .is-visible when they
    cross the viewport. If JS is disabled or motion is reduced, elements show
@@ -1510,7 +1693,7 @@ img.hero__media {
 }
 .donate-embed givebutter-widget {
   display: block;
-  width: 350px;
+  width: 400px;
   margin: 0;
 }
 
