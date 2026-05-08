@@ -296,24 +296,24 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 3rem 0; }
 }
 .hero--media .container {
   width: 100%;
-  /* Widen past the standard 1120px constraint so the right-aligned copy can
+  /* Widen past the standard 1120px constraint so the left-aligned copy can
      sit closer to the viewport edge — but cap it so the text still pulls in
      from the very edge a little. */
   max-width: 1320px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
+  align-items: flex-start;
+  text-align: left;
 }
 .hero--media .container > * {
-  max-width: 420px;
+  max-width: 520px;
 }
 .hero--media .mission {
   /* override the centered auto-margins from .hero .mission */
   margin: 1.5rem 0 2rem;
 }
 .hero--media .cta-row {
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 .hero--media .eyebrow,
 .hero--media h1,
@@ -1383,17 +1383,25 @@ img.hero__media {
 
 .subscribe {
   display: flex;
+  flex-direction: column;
   gap: .5rem;
   margin-top: 1rem;
   max-width: 380px;
 }
 .subscribe input {
-  flex: 1;
   padding: .75rem .9rem;
   border: none;
   border-radius: var(--radius);
   font-family: var(--sans);
   font-size: .95rem;
+}
+.subscribe__row {
+  display: flex;
+  gap: .5rem;
+}
+.subscribe__row input {
+  flex: 1;
+  min-width: 0;
 }
 .subscribe .btn { white-space: nowrap; }
 

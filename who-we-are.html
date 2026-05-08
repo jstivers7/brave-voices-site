@@ -311,9 +311,16 @@
         <div>
           <h4>Join the Brave Voices Movement</h4>
           <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
-          <form class="subscribe" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
-            <input type="email" placeholder="Enter your email..." aria-label="Email" required />
-            <button type="submit" class="btn">Subscribe</button>
+          <form class="subscribe" action="https://orh.us1.list-manage.com/subscribe/post?u=c2b687fabcd89689e32e6b6a7&amp;id=cb6bb94ef4&amp;f_id=00082ae5f0" method="POST" target="_blank" novalidate>
+            <input type="text" name="FNAME" placeholder="Your first name" aria-label="First name" autocomplete="given-name" />
+            <div class="subscribe__row">
+              <input type="email" name="EMAIL" placeholder="Enter your email..." aria-label="Email" autocomplete="email" required />
+              <button type="submit" class="btn">Subscribe</button>
+            </div>
+            <!-- Mailchimp anti-bot honeypot — leave blank, do not change name -->
+            <div aria-hidden="true" style="position:absolute; left:-5000px">
+              <input type="text" name="b_c2b687fabcd89689e32e6b6a7_cb6bb94ef4" tabindex="-1" value="" autocomplete="off" />
+            </div>
           </form>
         </div>
         <div>

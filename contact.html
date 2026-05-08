@@ -75,7 +75,18 @@
         </div>
 
         <div>
-          <form class="contact-form" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-success').hidden = false;">
+          <form
+            class="contact-form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onsubmit="handleContactSubmit(event)">
+            <input type="hidden" name="form-name" value="contact" />
+            <!-- Honeypot field — invisible to humans, bots fill it in and get rejected -->
+            <p style="position:absolute; left:-9999px; height:0; overflow:hidden" aria-hidden="true">
+              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
             <div class="form-row">
               <label for="contact-name">Your name</label>
               <input id="contact-name" name="name" type="text" required autocomplete="name" />
@@ -106,10 +117,37 @@
               <label for="contact-consent">I understand Brave Voices will only use my message to respond — not to add me to a mailing list.</label>
             </div>
             <button type="submit" class="btn btn--lg">Send with care</button>
-            <p id="form-success" class="form-success" hidden>
+            <p id="form-success" class="form-success" role="status" aria-live="polite" hidden>
               Thank you — your message is on its way. A real person will read it and write back.
             </p>
+            <p id="form-error" class="form-success" role="alert" aria-live="assertive" hidden style="color: var(--rose-dark)">
+              Something went wrong sending your message. Please try again, or email us at <a href="mailto:bravevoices.help@gmail.com">bravevoices.help@gmail.com</a>.
+            </p>
           </form>
+
+          <script>
+            // AJAX submit so the user stays on the page and sees an inline thank-you
+            // instead of being redirected to Netlify's default success page.
+            async function handleContactSubmit(event) {
+              event.preventDefault();
+              var form = event.target;
+              var data = new FormData(form);
+              try {
+                var response = await fetch('/', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: new URLSearchParams(data).toString()
+                });
+                if (!response.ok) throw new Error('Network response was not ok');
+                form.reset();
+                document.getElementById('form-success').hidden = false;
+                document.getElementById('form-error').hidden = true;
+              } catch (err) {
+                document.getElementById('form-error').hidden = false;
+                document.getElementById('form-success').hidden = true;
+              }
+            }
+          </script>
         </div>
       </div>
     </div>
@@ -196,9 +234,16 @@
         <div>
           <h4>Join the Brave Voices Movement</h4>
           <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
-          <form class="subscribe" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
-            <input type="email" placeholder="Enter your email..." aria-label="Email" required />
-            <button type="submit" class="btn">Subscribe</button>
+          <form class="subscribe" action="https://orh.us1.list-manage.com/subscribe/post?u=c2b687fabcd89689e32e6b6a7&amp;id=cb6bb94ef4&amp;f_id=00082ae5f0" method="POST" target="_blank" novalidate>
+            <input type="text" name="FNAME" placeholder="Your first name" aria-label="First name" autocomplete="given-name" />
+            <div class="subscribe__row">
+              <input type="email" name="EMAIL" placeholder="Enter your email..." aria-label="Email" autocomplete="email" required />
+              <button type="submit" class="btn">Subscribe</button>
+            </div>
+            <!-- Mailchimp anti-bot honeypot — leave blank, do not change name -->
+            <div aria-hidden="true" style="position:absolute; left:-5000px">
+              <input type="text" name="b_c2b687fabcd89689e32e6b6a7_cb6bb94ef4" tabindex="-1" value="" autocomplete="off" />
+            </div>
           </form>
         </div>
         <div>

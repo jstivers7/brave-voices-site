@@ -25,10 +25,21 @@ Favicon (browser tab icon on every page)
                     recommended.
 
 
-Home (index.html) — video background
+Home (index.html) — image background
 ------------------------------------
-  hero.mp4          The main looping video (required to show video).
-  hero-poster.jpg   Still image shown before the video loads (optional).
+The home page hero is a still image with a brand-tinted gradient overlay
+on top so the right-aligned headline stays readable. Drop your file at
+the path below; if it's missing, the brand gradient shows instead.
+
+  hero.svg          Main hero image, currently expected as an SVG with a
+                    transparent background. Where the SVG is transparent,
+                    the section's teal->rose brand gradient shows through.
+                    A landscape viewBox (e.g., 1920x1080) is recommended
+                    so it scales well via object-fit: cover.
+
+                    Compose with the LEFT side of the frame as the focal
+                    point — the headline and CTAs sit on the right and
+                    have a darkening gradient behind them.
 
 
 Inner pages — hero image (right side of the gradient header)
