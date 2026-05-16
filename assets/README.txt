@@ -149,6 +149,32 @@ sizes below or larger.
                             (4:5 portrait, ~800x1000).
 
 
+Who We Are page — Partner logos (assets/partners/)
+---------------------------------------------------
+The Partners section on who-we-are.html is a horizontal scrolling marquee
+of 9 partner logos. They scroll automatically, pause when hovered, and
+fall back to a static centered grid for visitors who prefer reduced motion.
+
+Each logo is rendered at 64px tall (48px on small screens) inside a
+~220px-wide cell, and converted to monochrome by default — they brighten
+into full color on hover. PNGs with transparent backgrounds work best.
+SVGs are even better (sharper at any size).
+
+  stop-it-now.png        Stop It Now! — stopitnow.org
+  sane-sart.png          sane sart — sanesart.org
+  grok-the-world.png     Grok The World — groktheworld.com
+  cnvc.png               The Center for Nonviolent Communication — cnvc.org
+  time-to-tell.png       Time To Tell — timetotell.org
+  siblings-too.png       #SiblingsToo — siblingstoo.com
+  incest-aware.png       IncestAWARE — incestaware.org
+  aila.png               AILA: Anti-Incest Liberation Agents — incestaware.org
+  empower-survivors.png  EmpowerSurvivors — empowersurvivors.net
+
+If a partner sends you an SVG instead of a PNG, save it under the same
+basename (e.g., `cnvc.svg`) and update the `<img src="...">` reference
+in who-we-are.html.
+
+
 Who We Are page — Board, advisor, and staff cards (assets/team/)
 ----------------------------------------------------------------
 The Board, Advisors, and Team sections on who-we-are.html show team cards

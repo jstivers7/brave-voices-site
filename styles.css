@@ -818,6 +818,98 @@ img.hero__media {
   font-weight: 600;
 }
 
+/* ---------- Partner logo marquee ---------- */
+/* Used on who-we-are.html. Two copies of the logos are rendered; the track
+   slides left by exactly one set width, so the loop appears seamless. */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Soft fade-in / fade-out at the section edges so logos don't pop on/off */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+}
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+}
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track {
+  animation-play-state: paused;
+}
+.marquee__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  /* Override the default link underline-on-hover */
+}
+.marquee__item:hover { border: none; }
+.marquee__item img {
+  height: 64px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(100%);
+  opacity: .75;
+  transition: filter .25s ease, opacity .25s ease;
+}
+.marquee__item:hover img,
+.marquee__item:focus img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+/* Text fallback shown when a partner's logo image is missing.
+   Inline-styled `display:none` is flipped to `inline-flex` by the img onerror handler. */
+.marquee__name {
+  align-items: center;
+  height: 64px;
+  padding: 0 1.25rem;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--teal-dark);
+  white-space: nowrap;
+  border: 1px solid rgba(94, 148, 148, 0.35);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .55);
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+.marquee__item:hover .marquee__name,
+.marquee__item:focus .marquee__name {
+  background: var(--rose-soft);
+  color: var(--rose-dark);
+  border-color: var(--rose);
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+/* Static fallback when the visitor prefers reduced motion: stack logos in a centered grid instead of scrolling */
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+  .marquee__track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 3rem;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+/* Smaller logos and matching chip height on phones */
+@media (max-width: 560px) {
+  .marquee__item img { height: 48px; max-width: 160px; }
+  .marquee__name { height: 48px; font-size: .95rem; padding: 0 1rem; }
+}
+
 /* ---------- Team card: square photo on top, bio below ---------- */
 /* Used on who-we-are.html for board, advisors, and staff cards. */
 .team-card {
@@ -1702,6 +1794,7 @@ img.hero__media {
 .donate-embed givebutter-widget {
   display: block;
   width: 400px;
+  max-width: 100%;
   margin: 0;
 }
 
@@ -1801,9 +1894,33 @@ img.hero__media {
   .hero .mission { font-size: 1.2rem; }
 }
 
+@media (max-width: 700px) {
+  /* Below 700px the 8-item nav gets cramped — let it scroll horizontally
+     instead of wrapping awkwardly. Logo stays put on the left. */
+  .nav { gap: .5rem; padding: 0.35rem 1rem; }
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1.25rem;
+    /* Bleed slightly into the right edge so visitors see there's more to scroll */
+    padding-right: 1rem;
+    margin-right: -1rem;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links li { flex-shrink: 0; }
+  .nav-links a:not(.btn) { white-space: nowrap; }
+}
+
 @media (max-width: 520px) {
-  .nav { flex-wrap: wrap; }
-  .nav-links { width: 100%; justify-content: space-between; gap: .5rem; }
   body { font-size: 16px; }
   .quote-block, .script { padding: 1.5rem; }
+  /* Hero copy tightens further on tiny screens */
+  .hero--media .container > * { max-width: 100%; }
+  .hero .mission { font-size: 1.05rem; }
+  /* Marquee text fallback chips read smaller too */
+  .marquee__name { font-size: .95rem; padding: 0 1rem; }
+  /* Page-hero on very small screens — pull the headline tighter */
+  .page-hero h1 { font-size: clamp(1.85rem, 7vw, 2.4rem); }
 }

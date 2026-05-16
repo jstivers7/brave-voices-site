@@ -283,6 +283,45 @@
     </div>
   </section>
 
+  <!-- Partners — logo marquee -->
+  <section class="section section--alt">
+    <div class="container" style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem">
+      <span class="eyebrow">Partners</span>
+      <h2>In good company.</h2>
+      <p class="lede">
+        We do this work alongside organizations and communities who share the conviction that breaking the silence is how we protect the next child.
+      </p>
+    </div>
+
+    <!-- Marquee: scrolls horizontally, pauses on hover, falls back to a static grid if the visitor prefers reduced motion.
+         If a logo image fails to load, the marquee__name fallback chip shows the partner's name instead so the marquee
+         still reads as a row of partners until the actual logo file is dropped in. -->
+    <div class="marquee" aria-label="Partner organizations">
+      <div class="marquee__track">
+        <!-- First set: real logos linking to each partner's site -->
+        <a href="https://stopitnow.org/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/stop-it-now.png" alt="Stop It Now!" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Stop It Now!</span></a>
+        <a href="https://www.sanesart.org/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/sane-sart.png" alt="sane sart" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">sane sart</span></a>
+        <a href="https://groktheworld.com/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/grok-the-world.png" alt="Grok The World" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Grok The World</span></a>
+        <a href="https://www.cnvc.org/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/cnvc.png" alt="The Center for Nonviolent Communication" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Center for Nonviolent Communication</span></a>
+        <a href="https://www.timetotell.org/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/time-to-tell.png" alt="Time To Tell" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Time To Tell</span></a>
+        <a href="https://www.siblingstoo.com/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/siblings-too.png" alt="#SiblingsToo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">#SiblingsToo</span></a>
+        <a href="https://www.incestaware.org/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/incest-aware.png" alt="IncestAWARE" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">IncestAWARE</span></a>
+        <a href="https://www.incestaware.org/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/aila.png" alt="AILA: Anti-Incest Liberation Agents" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">AILA</span></a>
+        <a href="https://www.empowersurvivors.net/" target="_blank" rel="noopener" class="marquee__item"><img src="assets/partners/empower-survivors.png" alt="EmpowerSurvivors" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">EmpowerSurvivors</span></a>
+        <!-- Second set: duplicate of the first, hidden from screen readers so the list isn't announced twice -->
+        <a href="https://stopitnow.org/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/stop-it-now.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Stop It Now!</span></a>
+        <a href="https://www.sanesart.org/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/sane-sart.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">sane sart</span></a>
+        <a href="https://groktheworld.com/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/grok-the-world.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Grok The World</span></a>
+        <a href="https://www.cnvc.org/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/cnvc.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Center for Nonviolent Communication</span></a>
+        <a href="https://www.timetotell.org/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/time-to-tell.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">Time To Tell</span></a>
+        <a href="https://www.siblingstoo.com/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/siblings-too.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">#SiblingsToo</span></a>
+        <a href="https://www.incestaware.org/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/incest-aware.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">IncestAWARE</span></a>
+        <a href="https://www.incestaware.org/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/aila.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">AILA</span></a>
+        <a href="https://www.empowersurvivors.net/" target="_blank" rel="noopener" class="marquee__item" aria-hidden="true" tabindex="-1"><img src="assets/partners/empower-survivors.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'" /><span class="marquee__name" style="display:none">EmpowerSurvivors</span></a>
+      </div>
+    </div>
+  </section>
+
   <!-- Closing CTA -->
   <section class="section section--cta" style="--cta-bg: url('assets/cta-who-we-are.jpg');">
     <div class="container narrow" style="text-align:center">
