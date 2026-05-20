@@ -24,7 +24,10 @@
       <a href="index.html" class="logo" aria-label="Brave Voices — home">
         <img src="assets/logo.png" alt="Brave Voices" onerror="this.parentNode.innerHTML='Brave<span>Voices</span>';" />
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+      </button>
+      <ul id="nav-menu" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="learn.html">Learn</a></li>
         <li><a href="listen.html">Listen</a></li>
@@ -263,6 +266,7 @@
     </div>
   </footer>
 
+  <script src="nav.js" defer></script>
   <script src="parallax.js" defer></script>
   <script src="reveal.js" defer></script>
 </body>

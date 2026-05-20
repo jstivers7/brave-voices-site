@@ -131,8 +131,8 @@ hr { border: none; border-top: 1px solid var(--rule); margin: 3rem 0; }
   max-width: 100%;
 }
 @media (max-width: 640px) {
-  .logo img { height: 72px; }
-  :root { --nav-h: 84px; }
+  .logo img { height: 88px; }
+  :root { --nav-h: 100px; }
 }
 
 .nav-links {
@@ -1451,7 +1451,7 @@ img.hero__media {
 }
 .footer-logo .footer-logo-fallback span { color: var(--rose-soft); }
 @media (max-width: 640px) {
-  .footer-logo img { height: 72px; }
+  .footer-logo img { height: 88px; }
 }
 .site-footer h4 {
   font-family: var(--serif);
@@ -1894,33 +1894,129 @@ img.hero__media {
   .hero .mission { font-size: 1.2rem; }
 }
 
+/* ----- Hamburger nav toggle (visible only on mobile) ----- */
+.nav-toggle {
+  display: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: .65rem;
+  margin-right: -.65rem;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+.nav-toggle__icon,
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 1px;
+  transition: transform .25s ease, opacity .15s ease, background-color .15s ease;
+}
+.nav-toggle__icon { position: relative; }
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle__icon::before { top: -7px; }
+.nav-toggle__icon::after  { top:  7px; }
+/* Animated X when expanded */
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon {
+  background: transparent;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon::before {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__icon::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 700px) {
-  /* Below 700px the 8-item nav gets cramped — let it scroll horizontally
-     instead of wrapping awkwardly. Logo stays put on the left. */
-  .nav { gap: .5rem; padding: 0.35rem 1rem; }
+  /* Show the hamburger; hide the horizontal nav-links by default. */
+  .nav-toggle { display: inline-flex; }
+
+  /* Drop the menu down from the bottom of the sticky header. */
   .nav-links {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 1.25rem;
-    /* Bleed slightly into the right edge so visitors see there's more to scroll */
-    padding-right: 1rem;
-    margin-right: -1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-top: 1px solid var(--rule);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    /* Closed by default — slides open when JS sets data-open="true" */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, box-shadow .3s ease;
+    box-shadow: none;
   }
-  .nav-links::-webkit-scrollbar { display: none; }
-  .nav-links li { flex-shrink: 0; }
-  .nav-links a:not(.btn) { white-space: nowrap; }
+  .nav-links[data-open="true"] {
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  }
+  .nav-links li { width: 100%; margin: 0; }
+  .nav-links a:not(.btn) {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+  }
+  .nav-links li:last-child a:not(.btn) {
+    border-bottom: none;
+  }
+  .nav-links a:not(.btn):hover,
+  .nav-links a:not(.btn).active {
+    background: var(--bg-alt);
+    color: var(--rose);
+    border-bottom-color: var(--rule);
+  }
+  .nav-links .btn {
+    margin: 1rem 1.5rem 1.25rem;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Slightly larger body text on mobile for easier reading. Because most
+     other text on the site sizes in rem relative to the body, bumping the
+     body cascades to ledes, paragraphs, list items, captions, etc. */
+  body { font-size: 18px; }
 }
 
 @media (max-width: 520px) {
-  body { font-size: 16px; }
   .quote-block, .script { padding: 1.5rem; }
   /* Hero copy tightens further on tiny screens */
   .hero--media .container > * { max-width: 100%; }
-  .hero .mission { font-size: 1.05rem; }
+  .hero .mission { font-size: 1.15rem; }
   /* Marquee text fallback chips read smaller too */
   .marquee__name { font-size: .95rem; padding: 0 1rem; }
   /* Page-hero on very small screens — pull the headline tighter */
-  .page-hero h1 { font-size: clamp(1.85rem, 7vw, 2.4rem); }
+  .page-hero h1 { font-size: clamp(1.95rem, 7vw, 2.4rem); }
+}
+
+/* Text fills the page on mobile — override the inline max-width: 60%
+   constraints that section ledes use on desktop so they don't get
+   awkwardly narrow on phones. */
+@media (max-width: 700px) {
+  .lede {
+    max-width: 100% !important;
+  }
 }
