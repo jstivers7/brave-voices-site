@@ -80,16 +80,13 @@
         <div>
           <form
             class="contact-form"
-            name="contact"
+            action="https://api.web3forms.com/submit"
             method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
             onsubmit="handleContactSubmit(event)">
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="access_key" value="e094593c-fa05-4d4c-a027-4a0dcfc0bf44" />
+            <input type="hidden" name="subject" value="New message from Brave Voices contact form" />
             <!-- Honeypot field — invisible to humans, bots fill it in and get rejected -->
-            <p style="position:absolute; left:-9999px; height:0; overflow:hidden" aria-hidden="true">
-              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-            </p>
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="form-row">
               <label for="contact-name">Your name</label>
               <input id="contact-name" name="name" type="text" required autocomplete="name" />
@@ -130,18 +127,17 @@
 
           <script>
             // AJAX submit so the user stays on the page and sees an inline thank-you
-            // instead of being redirected to Netlify's default success page.
             async function handleContactSubmit(event) {
               event.preventDefault();
               var form = event.target;
               var data = new FormData(form);
               try {
-                var response = await fetch('/', {
+                var response = await fetch('https://api.web3forms.com/submit', {
                   method: 'POST',
-                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                  body: new URLSearchParams(data).toString()
+                  body: data
                 });
-                if (!response.ok) throw new Error('Network response was not ok');
+                var json = await response.json();
+                if (!response.ok || !json.success) throw new Error(json.message || 'Submission failed');
                 form.reset();
                 document.getElementById('form-success').hidden = false;
                 document.getElementById('form-error').hidden = true;
