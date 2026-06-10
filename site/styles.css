@@ -1468,6 +1468,10 @@ img.hero__media {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255,255,255,.2);
 }
+.footer-grid > div:nth-child(2),
+.footer-grid > div:nth-child(3) {
+  text-align: right;
+}
 .site-footer a { color: #fff; opacity: .9; }
 .site-footer a:hover { color: #fff; opacity: 1; border-bottom-color: #fff; }
 .site-footer ul { list-style: none; padding: 0; }
