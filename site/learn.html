@@ -754,17 +754,17 @@
         <div>
           <h4>Join the Brave Voices Movement</h4>
           <p style="opacity:.9">Get updates, resources, and gentle reminders that your voice matters.</p>
-          <form class="subscribe" action="https://orh.us1.list-manage.com/subscribe/post?u=c2b687fabcd89689e32e6b6a7&amp;id=cb6bb94ef4&amp;f_id=00082ae5f0" method="POST" target="_blank" novalidate>
-            <input type="text" name="FNAME" placeholder="Your first name" aria-label="First name" autocomplete="given-name" />
+          <form class="subscribe" onsubmit="return submitNewsletter(this)">
+            <input type="text" name="FirstName" placeholder="Your first name" aria-label="First name" autocomplete="given-name" />
             <div class="subscribe__row">
-              <input type="email" name="EMAIL" placeholder="Enter your email..." aria-label="Email" autocomplete="email" required />
+              <input type="email" name="EmailAddress" placeholder="Enter your email..." aria-label="Email" autocomplete="email" required />
               <button type="submit" class="btn">Subscribe</button>
             </div>
-            <!-- Mailchimp anti-bot honeypot — leave blank, do not change name -->
-            <div aria-hidden="true" style="position:absolute; left:-5000px">
-              <input type="text" name="b_c2b687fabcd89689e32e6b6a7_cb6bb94ef4" tabindex="-1" value="" autocomplete="off" />
-            </div>
+            <p class="subscribe__msg" style="display:none; margin-top:.5rem; font-size:.9rem"></p>
           </form>
+          <script>
+          function submitNewsletter(form){var b=form.querySelector('.btn'),m=form.querySelector('.subscribe__msg'),e=form.EmailAddress.value,f=form.FirstName.value;b.disabled=true;b.textContent='Sending...';m.style.display='none';fetch('https://emailoctopus.com/api/1.6/lists/fcdc6b52-6443-11f1-91f9-fb8439600361/contacts',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({api_key:'eo_52fef136653354bb6dccbabc8f1a45b4ff1b7a7705f32a73ab5dd1d44b037b99',email_address:e,fields:{FirstName:f},status:'SUBSCRIBED'})}).then(function(r){return r.json()}).then(function(d){if(d.error){m.textContent=d.error.code==='MEMBER_EXISTS_WITH_EMAIL_ADDRESS'?'You\'re already subscribed!':d.error.message;m.style.color='#CC6F82'}else{m.textContent='Thank you for subscribing!';m.style.color='#6FA5A5';form.reset()}m.style.display='block';b.disabled=false;b.textContent='Subscribe'}).catch(function(){m.textContent='Something went wrong. Please try again.';m.style.color='#CC6F82';m.style.display='block';b.disabled=false;b.textContent='Subscribe'});return false}
+          </script>
         </div>
         <div>
           <h4>Follow us</h4>
