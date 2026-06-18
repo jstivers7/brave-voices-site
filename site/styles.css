@@ -2038,10 +2038,10 @@ img.hero__media {
    titles) are uppercase+bold so 15–16px is acceptable for them. */
 @media (max-width: 700px) {
   .eyebrow                      { font-size: .875rem; }  /* ~15.75px — uppercase label */
-  .team-card__role              { font-size: .875rem; }  /* ~15.75px — uppercase label */
+  .team-card__role              { font-size: 1rem;    }  /* 18px     — uppercase label */
   .book-card h4                 { font-size: .9rem;   }  /* ~16.2px  — author/subtitle */
   .doc-meta                     { font-size: 1rem;    }  /* 18px     — description text */
   .card--portrait .card-text h4 { font-size: .875rem; }  /* ~15.75px — overlay label   */
   .card--portrait .card-text p  { font-size: 1rem;    }  /* 18px     — overlay caption */
-  .team-card__bio               { font-size: 1rem;    }  /* 18px     — bio paragraph   */
+  .team-card__bio               { font-size: 1.05rem; }  /* ~19px    — bio paragraph   */
 }
